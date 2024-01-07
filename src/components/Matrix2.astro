@@ -1,0 +1,68 @@
+---
+
+---
+
+<canvas id='Matrix' class='h-full w-full block fixed top-0 left-0 -z-50'></canvas>
+
+<script defer>
+  {
+    /*First we have to initialise our canvas with a 2D context. I also set the canvas to take up the whole viewport by setting it's width and height */
+  }
+
+  const canvas = document.getElementById('Matrix');
+  const context = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  {
+    /*Next I create the alphabet from which we will pick our characters for the rain. I'll use name characters (A variation of name symbols was used in the Matrix movie itself.), the surname alphabet and arabic numbers. The concatenation of these will create the alphabet. */
+  }
+
+  const name = 'Michele Maria';
+  const surname = 'Serrapica';
+  const aka = 'Mickey';
+
+  const alphabet = name + surname + aka;
+
+  {
+    /*We have to calculate how many "rain columns" will fit on the screen and to do that I'll set a fixed fontsize and divide the width on the window's innerWidth to get the exact column count. */
+  }
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+
+  {
+    /*I'll use an array to store and render the raindrops. The index of a given element will be the coordinate of the raindrop on the X axis, and the value of a given element will hold it's coordinate on the Y axis. This way we don't need a 2D array. To initialise the array I fill it up with with ones, so aftert the initialization we will have the same exact height for every column: 1. */
+  }
+  const rainDrops = [];
+
+  for (let x = 0; x < columns; x++) {
+    rainDrops[x] = 1;
+  }
+
+  {
+    /*Now it's time to implement the hearth of our effect the draw function. First we will paint the whole canvas with a transparent black color. This will give us the trail effect on the raindrops, when the drop falls the already drown characters will slowly fade out. Next I'll set the fontsize and the color (of course it is green 😎). And now comes the 🔑 key. I'll loop through the raindrop array, and for every element I'll pick a random character from our alphabet and render that in the next position of the column. The important thing here is that you have to multiply the coordinates (elemnt value and index) with the font size to get the perfect spacing. Lastly we have to move our raindrops which dropped below the viewport height, to the top of that column. To get the raining effect I don't put it to the top right away, but add a little randomness by adding a random chance to do that. */
+  }
+  const draw = () => {
+    context.fillStyle = 'rgba(68, 68, 63, 0.1)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = '#8c52ff';
+    context.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < rainDrops.length; i++) {
+      const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+      context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+      rainDrops[i]++;
+    }
+  };
+
+  {
+    /*As a last step I need to call the draw function in an interval and this will call the draw function in every 30ms. */
+  }
+  setInterval(draw, 90);
+</script>
