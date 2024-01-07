@@ -44,7 +44,7 @@
     /*Now it's time to implement the hearth of our effect the draw function. First we will paint the whole canvas with a transparent black color. This will give us the trail effect on the raindrops, when the drop falls the already drown characters will slowly fade out. Next I'll set the fontsize and the color (of course it is green 😎). And now comes the 🔑 key. I'll loop through the raindrop array, and for every element I'll pick a random character from our alphabet and render that in the next position of the column. The important thing here is that you have to multiply the coordinates (elemnt value and index) with the font size to get the perfect spacing. Lastly we have to move our raindrops which dropped below the viewport height, to the top of that column. To get the raining effect I don't put it to the top right away, but add a little randomness by adding a random chance to do that. */
   }
   const draw = () => {
-    context.fillStyle = 'rgba(68, 68, 63, 0.1)';
+    context.fillStyle = 'rgba(68, 68, 63, 0.2)';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     context.fillStyle = '#8c52ff';
