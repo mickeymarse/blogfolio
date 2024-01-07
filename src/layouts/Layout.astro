@@ -1,4 +1,6 @@
 ---
+import Matrix2 from '../components/Matrix2.astro';
+import Navbar from '../components/Navbar.astro';
 interface Props {
   title: string;
 }
@@ -17,6 +19,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class='bg-back text-white'>
+    <Matrix2 />
+    <Navbar />
     <slot />
   </body>
 </html>
