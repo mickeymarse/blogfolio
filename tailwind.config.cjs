@@ -5,6 +5,10 @@ export default {
     extend: {
       colors: {
         back: '#44443f',
+        neonp: '#FB48C4',
+        reddish: '#ff5757',
+        deepp: '#8c52ff',
+        malach: '#00ff41',
       },
     },
   },
