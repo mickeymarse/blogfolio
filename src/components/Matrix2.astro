@@ -31,6 +31,31 @@
   }
 
   // Set backgroun/trail, font size and color, loop for the raindrops.
+  // Pickeing alphabet letters in order
+  let counter = 0;
+
+  const draw = () => {
+    context.fillStyle = 'rgba(68, 68, 63, 0.2)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = '#8c52ff';
+    context.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < rainDrops.length; i++) {
+      const text = alphabet.charAt(counter % alphabet.length); // Use the counter to get the next character from the alphabet
+      context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+      rainDrops[i]++;
+
+      counter++;
+    }
+  };
+  {
+    /*
+  // With random character selection
   const draw = () => {
     context.fillStyle = 'rgba(68, 68, 63, 0.2)';
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -47,7 +72,8 @@
       }
       rainDrops[i]++;
     }
-  };
+  };*/
+  }
 
   // Interval for calling function
   setInterval(draw, 90);
