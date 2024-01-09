@@ -2,13 +2,16 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 export default function TypedIntro3() {
   const [text] = useTypewriter({
-    words: ['Hello World!', 'From Me!', 'To You!', 'Hooga chaga hooga hooga!'],
+    words: ['Welcome!', `I'm Michele Maria Serrapica`, `I'm a Full Stack Developer`],
     loop: 0,
+    typeSpeed: 100,
+    deleteSpeed: 25,
+    delaySpeed: 3000,
   });
   return (
     <div className='App'>
-      <span className='text-2xl text-malach'>{text}</span>
-      <Cursor cursorColor='#000' />
+      <span>{text}</span>
+      <Cursor cursorStyle='_' />
     </div>
   );
 }

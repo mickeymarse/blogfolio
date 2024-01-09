@@ -7,7 +7,7 @@ export default function TypedIntro() {
         autoStart: true,
         loop: true,
         cursor: '_',
-        delay: 150,
+        delay: 100,
         cursorClassName: 'text-malach text-6xl motion-safe:animate-ping',
         wrapperClassName: 'text-malach text-6xl',
       }}
