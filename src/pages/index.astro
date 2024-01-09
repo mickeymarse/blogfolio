@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import arrowDown from '../../public/icons/down-m.png';
 import TypedIntro from '../components/TypedIntro.tsx';
 import TypedProjects from '../components/TypedProjects.tsx';
+import TypedAbout from '../components/TypedAbout.tsx';
 // import TypedIntro3 from '../components/TypedIntro3.tsx';
 import Layout from '../layouts/Layout.astro';
 
@@ -11,8 +12,8 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title=`Mickey's Portfolio`>
   <!-- TODO: Check issue with fade transition -->
-  <main class='flex flex-col items-center'>
-    <section class='mt-60 mb-56 px-40'>
+  <main class='grid place-items-center px-40'>
+    <section class='mt-60 mb-56'>
       <TypedIntro client:load />
     </section>
     <Image
@@ -20,8 +21,11 @@ import Layout from '../layouts/Layout.astro';
       alt='chevron arrow down'
       class='size-28 motion-safe:animate-pulse mb-24'
     />
-    <section id='work' class='mt-60 mb-10'>
+    <section id='work' class='mb-24 place-self-end'>
       <TypedProjects client:visible />
+    </section>
+    <section id='about' class='mb-24 place-self-end'>
+      <TypedAbout client:visible />
     </section>
     <!-- <img src='/icons/down-m.png' alt='chevron arrow down' class='w-10 h-10' /> -->
     <!-- <section class='flex justify-center mt-11 text-6xl text-malach'>
@@ -30,7 +34,5 @@ import Layout from '../layouts/Layout.astro';
     <!-- <img src='matrix.gif' alt='Matrix rain' class='h-56 w-60' /> -->
     <!-- <video src='matext2.mp4' autoplay loop class='h-3/6 w-4/6 rounded-2xl'></video> -->
     <!-- <Matrix /> -->
-
-    <h1 id='about'>About</h1>
   </main>
 </Layout>

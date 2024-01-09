@@ -7,11 +7,11 @@ export default function TypedProjects() {
         autoStart: true,
         cursor: '_',
         delay: 100,
-        cursorClassName: 'text-malach text-5xl font-mono motion-safe:animate-ping',
-        wrapperClassName: 'text-slate-200 text-5xl font-mono',
+        cursorClassName: 'text-malach text-5xl font-mono motion-safe:animate-pulse',
+        wrapperClassName: 'text-slate-100 text-6xl font-mono',
       }}
       onInit={(typewriter) => {
-        typewriter.typeString(`Past Projects`).start();
+        typewriter.typeString(`Recent Projects`).start();
       }}
     />
   );
