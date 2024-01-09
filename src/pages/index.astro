@@ -6,6 +6,7 @@ import TypedProjects from '../components/typewriter/TypedProjects.tsx';
 import TypedAbout from '../components/typewriter/TypedAbout.tsx';
 // import TypedIntro3 from '../components/TypedIntro3.tsx';
 import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
 
 // import Matrix from '../components/Matrix.astro';
 ---
@@ -23,6 +24,7 @@ import Layout from '../layouts/Layout.astro';
     />
     <section id='work' class='mb-24 place-self-end'>
       <TypedProjects client:visible />
+      <Projects />
     </section>
     <section id='about' class='mb-24 place-self-end'>
       <TypedAbout client:visible />
