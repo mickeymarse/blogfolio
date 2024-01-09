@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import arrowDown from '../../public/icons/down-m.png';
 import TypedIntro from '../components/TypedIntro.tsx';
 // import TypedIntro3 from '../components/TypedIntro3.tsx';
 import Layout from '../layouts/Layout.astro';
@@ -8,10 +10,16 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title=`Mickey's Portfolio`>
   <!-- TODO: Check issue with fade transition -->
-  <main>
-    <section class='flex justify-center mt-60 px-40'>
+  <main class='flex flex-col items-center'>
+    <section class='mt-60 px-40'>
       <TypedIntro client:load />
     </section>
+    <Image
+      src={arrowDown}
+      alt='chevron arrow down'
+      class='size-28 motion-safe:animate-pulse mt-60'
+    />
+    <!-- <img src='/icons/down-m.png' alt='chevron arrow down' class='w-10 h-10' /> -->
     <!-- <section class='flex justify-center mt-11 text-6xl text-malach'>
       <TypedIntro3 client:load />
     </section> -->
