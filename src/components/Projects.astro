@@ -3,14 +3,17 @@ import { Image } from 'astro:assets';
 import readingRoom from '../../public/RR-solid.png';
 ---
 
-<article class='my-5 flex flex-row flex-shrink-0'>
+<!-- TODO: Add icon/links -->
+<article class='mb-24 px-20 flex flex-row'>
   <Image
     src={readingRoom}
     alt='Screenshot of the login page of the Reading Room app in mobile and desktop views on a gradient pink background.'
-    class='size-1/2 flex-shrink-0'
+    class='size-full'
   />
-  <h3 class='text-slate-100 text-3xl flex-shrink-0'>Reading Room</h3>
-  <p class='text-slate-100 text-xl'>
-    Reading Room helps educators and parents guide children in developing healthy reading habits.
-  </p>
+  <section class='mx-5'>
+    <h3 class='text-slate-100 text-3xl font-bold'>Reading Room</h3>
+    <p class='text-slate-50 text-xl mt-3'>
+      Reading Room helps educators and parents guide children in developing healthy reading habits.
+    </p>
+  </section>
 </article>

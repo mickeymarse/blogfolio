@@ -13,21 +13,26 @@ import Projects from '../components/Projects.astro';
 
 <Layout title=`Mickey's Portfolio`>
   <!-- TODO: Check issue with fade transition -->
-  <main class='grid place-items-center px-40'>
-    <section class='mt-60 mb-56'>
+  <main class='grid px-40'>
+    <section class='mt-60 mb-56 place-self-center'>
       <TypedIntro client:load />
     </section>
     <Image
       src={arrowDown}
       alt='chevron arrow down'
-      class='size-28 motion-safe:animate-pulse mb-24'
+      class='size-28 motion-safe:animate-pulse mb-24 place-self-center'
     />
-    <section id='work' class='mb-24 place-self-end'>
-      <TypedProjects client:visible />
+
+    <section id='work' class='mb-24 grid'>
+      <header class='place-self-end mb-24'>
+        <TypedProjects client:visible />
+      </header>
       <Projects />
     </section>
-    <section id='about' class='mb-24 place-self-end'>
-      <TypedAbout client:visible />
+    <section id='about' class='mb-24 grid'>
+      <header class='place-self-end'>
+        <TypedAbout client:visible />
+      </header>
     </section>
     <!-- <img src='/icons/down-m.png' alt='chevron arrow down' class='w-10 h-10' /> -->
     <!-- <section class='flex justify-center mt-11 text-6xl text-malach'>
@@ -36,6 +41,7 @@ import Projects from '../components/Projects.astro';
     <!-- <img src='matrix.gif' alt='Matrix rain' class='h-56 w-60' /> -->
     <!-- <video src='matext2.mp4' autoplay loop class='h-3/6 w-4/6 rounded-2xl'></video> -->
     <!-- <Matrix /> -->
+    <!-- TODO: Create Footer component -->
   </main>
 </Layout>
 ../components/typewriter/TypedProjects.tsx
