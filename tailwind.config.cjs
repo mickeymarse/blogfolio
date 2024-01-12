@@ -7,6 +7,7 @@ export default {
         back: '#44443f',
         neonp: '#FB48C4',
         reddish: '#ff5757',
+        pinkish: '#ffecdb',
         deepp: '#8c52ff',
         malach: '#00ff41',
       },
