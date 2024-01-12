@@ -11,6 +11,9 @@ export default {
         deepp: '#8c52ff',
         malach: '#00ff41',
       },
+      fontFamily: {
+        matrix: ['Antimatrix', 'Matrix', 'GarishMonde', 'ui-monospace'],
+      },
     },
   },
   plugins: [],

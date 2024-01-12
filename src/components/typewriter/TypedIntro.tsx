@@ -9,11 +9,11 @@ export default function TypedIntro() {
         cursor: '_',
         delay: 100,
         cursorClassName: 'text-malach text-5xl font-mono motion-safe:animate-ping',
-        wrapperClassName: 'text-pinkish text-5xl font-mono',
+        wrapperClassName: 'text-pinkish text-6xl font-matrix font-bold',
       }}
       onInit={(typewriter) => {
         typewriter
-          .typeString(`Welcome to my humble virtual abode`)
+          .typeString(`Welcome to my virtual abode`)
           .pauseFor(2500)
           .deleteAll(25)
           .typeString(`I'm Michele Maria Serrapica`)
@@ -37,7 +37,7 @@ export default function TypedIntro() {
           .typeString(`... and enjoy your staying :) `)
           .pauseFor(2000)
           .deleteAll(25)
-          .typeString(`See you soon <3 `)
+          .typeString(`See you soon :3 `)
           .pauseFor(2000)
           .start();
       }}
