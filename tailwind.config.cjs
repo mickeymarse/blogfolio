@@ -13,7 +13,7 @@ export default {
       },
       fontFamily: {
         matrix: ['Antimatrix', 'Matrix', 'GarishMonde', 'ui-monospace'],
-        // FIXME: Find out why some fonts work and some other do not
+        // FIXME: Find out why some fonts work and some others do not
         capa: ['SyneMono', 'MajorMono', 'NovaMono', '"Courier New"'],
       },
     },
