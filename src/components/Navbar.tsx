@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navlink = 'rounded border-4 border-transparent hover:bg-neonp hover:text-back';
 
   useEffect(() => {
     console.log('useEffect called');
@@ -25,19 +26,19 @@ export default function Navbar() {
         isScrolled ? 'bg-back' : 'bg-transparent'
       }`}
     >
-      <a href='/' className='navlink text-malach motion-safe:animate-pulse'>
+      <a href='/' className={`${navlink} text-malach motion-safe:animate-pulse`}>
         _
       </a>
-      <a href='/#work' className='navlink'>
+      <a href='/#work' className={navlink}>
         Work
       </a>
-      <a href='/#about' className='navlink'>
+      <a href='/#about' className={navlink}>
         About
       </a>
-      <a href='/blog' className='navlink'>
+      <a href='/blog' className={navlink}>
         Blog
       </a>
-      <a href='/if' className='navlink'>
+      <a href='/if' className={navlink}>
         IF
       </a>
     </nav>
