@@ -9,6 +9,7 @@ import Layout from '../layouts/Layout.astro';
 import Projects from '../components/work/Projects.astro';
 import RR from '../components/work/RR.astro';
 import SOCS from '../components/work/SOCS.astro';
+import SID from '../components/work/SID.astro';
 ---
 
 <Layout title=`Mickey's Portfolio`>
@@ -28,6 +29,7 @@ import SOCS from '../components/work/SOCS.astro';
         <TypedProjects client:visible />
       </header>
       <Projects>
+        <SID />
         <RR />
         <SOCS />
       </Projects>
