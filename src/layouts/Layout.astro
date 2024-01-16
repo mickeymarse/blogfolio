@@ -1,7 +1,7 @@
 ---
 import Matrix from '../components/Matrix.astro';
-
 import Navbar from '../components/Navbar.tsx';
+import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -26,7 +26,6 @@ const { title } = Astro.props;
     <Matrix />
     <Navbar client:load />
     <slot />
-
-    ../components/Navbar.tsx
+    <Footer />
   </body>
 </html>
