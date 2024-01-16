@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import github from '../../../public/icons/github.png';
+import video from '../../../public/icons/video.png';
+import socs from '../../../public/SOCS.png';
+---
+
+<article class='mb-24 px-20 flex flex-row'>
+  <a href='https://socs-ui.onrender.com/' target='_blank'>
+    <Image
+      src={socs}
+      alt='Screenshot of the landing page of the SOCS app as well as a one of its pages on a gradient pink background.'
+      class='size-full rounded-lg hover:opacity-50'
+    />
+  </a>
+  <section class='mx-5 my-0 w-8/12'>
+    <h3 class='text-white text-3xl font-capa font-bold -mt-1'>SOCS</h3>
+    <p class='text-white text-xl font-mono font-extralight mt-3 mb-3'>
+      SOCS help organise and access all the resources shared daily by the School of Code coaches
+      during the bootcamp.
+    </p>
+    <a
+      href='https://github.com/SchoolOfCode/bc15-w8-project-front-end-wipit'
+      target='_blank'
+      class='inline-block'
+    >
+      <Image
+        src={github}
+        alt='Neon version of the GitHub logo.'
+        class='size-16 hover:motion-safe:animate-ping'
+      />
+    </a>
+    <a
+      href='https://github.com/SchoolOfCode/bc15-w8-project-back-end-wipit'
+      target='_blank'
+      class='inline-block'
+    >
+      <Image
+        src={github}
+        alt='Neon version of the GitHub logo.'
+        class='size-16 hover:motion-safe:animate-ping'
+      />
+    </a>
+    <a href='https://youtu.be/mxEHmPxkqgc' target='_blank' class='inline-block'>
+      <Image
+        src={video}
+        alt='Neon version of a standard video icon.'
+        class='size-16 hover:motion-safe:animate-ping'
+      />
+    </a>
+  </section>
+</article>

@@ -6,7 +6,9 @@ import TypedProjects from '../components/typewriter/TypedProjects.tsx';
 import TypedAbout from '../components/typewriter/TypedAbout.tsx';
 // import TypedIntro3 from '../components/TypedIntro3.tsx';
 import Layout from '../layouts/Layout.astro';
-import Projects from '../components/Projects.astro';
+import Projects from '../components/work/Projects.astro';
+import RR from '../components/work/RR.astro';
+import SOCS from '../components/work/SOCS.astro';
 ---
 
 <Layout title=`Mickey's Portfolio`>
@@ -25,7 +27,10 @@ import Projects from '../components/Projects.astro';
       <header class='place-self-end mb-24'>
         <TypedProjects client:visible />
       </header>
-      <Projects />
+      <Projects>
+        <RR />
+        <SOCS />
+      </Projects>
     </section>
     <section id='about' class='mb-24 grid'>
       <header class='place-self-end'>
