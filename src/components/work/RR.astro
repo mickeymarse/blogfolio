@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import github from '../../../public/icons/github.png';
-import video from '../../../public/icons/video.png';
+import { Icon } from 'astro-icon/components';
 import readingRoom from '../../../public/RR.png';
 ---
 
@@ -19,17 +18,15 @@ import readingRoom from '../../../public/RR.png';
       Reading Room helps educators and parents guide children in developing healthy reading habits.
     </p>
     <a href='https://github.com/SchoolOfCode/Reading-Room-App' target='_blank' class='inline-block'>
-      <Image
-        src={github}
-        alt='Neon version of the GitHub logo.'
-        class='size-16 hover:motion-safe:animate-ping'
+      <Icon
+        name='ph:github-logo-light'
+        class='size-16 text-malach hover:motion-safe:animate-ping'
       />
     </a>
     <a href='https://www.youtube.com/watch?v=Cjjdsl9NvZU' target='_blank' class='inline-block'>
-      <Image
-        src={video}
-        alt='Neon version of a standard video icon.'
-        class='size-16 hover:motion-safe:animate-ping'
+      <Icon
+        name='ph:youtube-logo-light'
+        class='size-16 text-malach hover:motion-safe:animate-ping'
       />
     </a>
   </section>

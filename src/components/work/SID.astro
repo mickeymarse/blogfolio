@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import instagram from '../../../public/icons/instagram.png';
+import { Icon } from 'astro-icon/components';
 import sid from '../../../public/21SID.png';
 ---
 
@@ -19,10 +19,9 @@ import sid from '../../../public/21SID.png';
       Currently creating a new website and a mobile app for a small business based in East London.
     </p>
     <a href='https://www.instagram.com/21_tarot_and_coffee/' target='_blank' class='inline-block'>
-      <Image
-        src={instagram}
-        alt='Neon version of the Instagram logo.'
-        class='size-16 hover:motion-safe:animate-ping'
+      <Icon
+        name='ph:instagram-logo-light'
+        class='size-16 text-malach hover:motion-safe:animate-ping'
       />
     </a>
   </section>
