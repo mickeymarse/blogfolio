@@ -18,17 +18,6 @@ export default {
       },
     },
   },
-  // FIXME: creating class properties
-  plugins: [
-    {
-      /*
-    plugin(function ({ addComponents, theme }) {
-      addComponents({
-        '.techIcon': {
-          margin: 'auto',
-        },
-      });
-    }),*/
-    },
-  ],
+
+  plugins: [],
 };
