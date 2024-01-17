@@ -9,6 +9,7 @@ import Projects from '../components/work/Projects.astro';
 import RR from '../components/work/RR.astro';
 import SOCS from '../components/work/SOCS.astro';
 import SID from '../components/work/SID.astro';
+import TechStack from '../components/TechStack.astro';
 ---
 
 <Layout title=`Mickey's Portfolio`>
@@ -36,6 +37,7 @@ import SID from '../components/work/SID.astro';
       <header class='place-self-end'>
         <TypedTech client:visible />
       </header>
+      <TechStack />
     </section>
     <section id='about' class='my-24 grid'>
       <header class='place-self-end'>
