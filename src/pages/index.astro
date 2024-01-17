@@ -4,7 +4,7 @@ import arrowDown from '../../public/icons/down-m.png';
 import TypedIntro from '../components/typewriter/TypedIntro.tsx';
 import TypedProjects from '../components/typewriter/TypedProjects.tsx';
 import TypedAbout from '../components/typewriter/TypedAbout.tsx';
-// import TypedIntro3 from '../components/TypedIntro3.tsx';
+import TypedTech from '../components/typewriter/TypedTech.tsx';
 import Layout from '../layouts/Layout.astro';
 import Projects from '../components/work/Projects.astro';
 import RR from '../components/work/RR.astro';
@@ -24,7 +24,7 @@ import SID from '../components/work/SID.astro';
       class='size-28 motion-safe:animate-pulse mb-24 place-self-center'
     />
 
-    <section id='work' class='mb-24 grid'>
+    <section id='work' class='my-24 grid'>
       <header class='place-self-end mb-24'>
         <TypedProjects client:visible />
       </header>
@@ -34,15 +34,16 @@ import SID from '../components/work/SID.astro';
         <SOCS />
       </Projects>
     </section>
-    <section id='about' class='mb-24 grid'>
+    <section id='about' class='my-24 grid'>
+      <header class='place-self-end'>
+        <TypedTech client:visible />
+      </header>
+    </section>
+    <section id='about' class='my-24 grid'>
       <header class='place-self-end'>
         <TypedAbout client:visible />
       </header>
     </section>
-    <!-- <img src='/icons/down-m.png' alt='chevron arrow down' class='w-10 h-10' /> -->
-    <!-- <section class='flex justify-center mt-11 text-6xl text-malach'>
-      <TypedIntro3 client:load />
-    </section> -->
     <!-- TODO: Create Footer component -->
   </main>
 </Layout>
