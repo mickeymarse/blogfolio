@@ -1,24 +1,14 @@
 ---
-import { Image } from 'astro:assets';
-import astro from '../../public/icons/astro.png';
-import morpheus from '../../public/icons/morpheus.png';
+import { Icon } from 'astro-icon/components';
 ---
 
 <!-- FIXME: Make text and icons starting from the bottom. -->
-<footer class='bottom-0 flex justify-center items-end my-5'>
-  <p class='font-mono text-s inline-block'>
-    Made with <Image
-      src={morpheus}
-      alt='Icon picture of Morpheus from The Matrix.'
-      class='size-5 inline-block'
-    /> and <Image
-      src={astro}
-      alt='Green and purple version of the Astro icon.'
-      class='size-5 inline-block'
-    />. Icons by <a
-      href='https://icons8.com/'
-      target='_blank'
-      class='rounded border-4 border-transparent hover:bg-malach hover:text-back'>Icons8</a
-    >.
+<footer class='bottom-0 flex justify-center my-5'>
+  <p class='font-mono text-base inline-block text-white'>
+    Made with
+    <Icon name='ph:pill' class='size-5 inline-block text-malach' /> and <Icon
+      name='devicon-plain:astro'
+      class='size-5 inline-block text-malach'
+    />.
   </p>
 </footer>
