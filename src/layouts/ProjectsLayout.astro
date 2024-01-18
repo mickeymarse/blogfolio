@@ -4,7 +4,7 @@ interface Props {
   projectTitle: string;
   projectParagraph: string;
   firstIconHref: string;
-  secondIconHref: string;
+  secondIconHref?: string;
   thirdIconHref?: string;
 }
 
@@ -32,10 +32,10 @@ const { imageHref, projectTitle, projectParagraph, firstIconHref, secondIconHref
     </a>
   </section>
 </article>
-<!-- TODO: research more about motion safe -->
+<!-- FIXME: check for workaround for the tailind classes bug in apply -->
 <style is:global>
   .icon-style {
-    @apply size-16 text-malach hover:motion-safe:animate-ping;
+    @apply size-16 text-malach hover:animate-ping;
   }
   .image-style {
     @apply size-full rounded-lg hover:opacity-50;

@@ -3,6 +3,7 @@ import ProjectsLayout from '../../layouts/ProjectsLayout.astro';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import readingRoom from '../../../public/RR.png';
+
 const layoutProps = {
   imageHref: 'https://reading-room-app.vercel.app/',
   projectTitle: 'Reading Room',
@@ -26,35 +27,16 @@ const layoutProps = {
     alt='Screenshot of the login page of the Reading Room app in mobile and desktop views on a gradient pink background.'
     class='image-style'
   />
-  <Icon slot='first-icon' name='ph:github-logo-light' class='icon-style' />
-  <Icon slot='second-icon' name='ph:youtube-logo-light' class='icon-style' />
+  <Icon
+    slot='first-icon'
+    name='ph:github-logo-light'
+    title='Neon green minimalist version of the Github logo.'
+    class='icon-style'
+  />
+  <Icon
+    slot='second-icon'
+    name='ph:youtube-logo-light'
+    title='Neon green minimalist version of the Youtube logo.'
+    class='icon-style'
+  />
 </ProjectsLayout>
-
-<!-- <article class='mb-24 px-20 flex flex-row'>
-  <a href='https://reading-room-app.vercel.app/' target='_blank'>
-    <Image
-      src={readingRoom}
-      alt='Screenshot of the login page of the Reading Room app in mobile and desktop views on a gradient pink background.'
-      class='size-full rounded-lg hover:opacity-50'
-    />
-    
-  </a>
-  <section class='mx-5 my-0 w-8/12'>
-    <h3 class='text-white text-3xl font-capa font-bold -mt-1'>Reading Room</h3>
-    <p class='text-white text-xl font-mono font-extralight mt-3 mb-3'>
-      Reading Room helps educators and parents guide children in developing healthy reading habits.
-    </p>
-    <a href='https://github.com/SchoolOfCode/Reading-Room-App' target='_blank' class='inline-block'>
-      <Icon
-        name='ph:github-logo-light'
-        class='size-16 text-malach hover:motion-safe:animate-ping'
-      />
-    </a>
-    <a href='https://www.youtube.com/watch?v=Cjjdsl9NvZU' target='_blank' class='inline-block'>
-      <Icon
-        name='ph:youtube-logo-light'
-        class='size-16 text-malach hover:motion-safe:animate-ping'
-      />
-    </a>
-  </section>
-</article> -->

@@ -1,28 +1,34 @@
 ---
+import ProjectsLayout from '../../layouts/ProjectsLayout.astro';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import sid from '../../../public/21SID.png';
+
+const layoutProps = {
+  imageHref: 'https://21sid.co.uk/',
+  projectTitle: '21 Sid (ongoing)',
+  projectParagraph:
+    'Currently creating a new website and a mobile app for a small business based in East London.',
+  firstIconHref: 'https://www.instagram.com/21_tarot_and_coffee/',
+};
 ---
 
-<article class='mb-24 px-20 flex flex-row'>
-  <a href='https://21sid.co.uk/' target='_blank'>
-    <Image
-      src={sid}
-      alt='Screenshot of a branding picture for a London cafe. It depicts a menu, a coffe cup, a receipt, a loyalty card and food wrapping paper, all branded.'
-      class='size-full rounded-lg hover:opacity-50'
-    />
-  </a>
-
-  <section class='mx-5 my-0 w-8/12'>
-    <h3 class='text-white text-3xl font-capa font-bold -mt-1'>21 Sid (ongoing)</h3>
-    <p class='text-white text-xl font-mono font-extralight mt-3 mb-3'>
-      Currently creating a new website and a mobile app for a small business based in East London.
-    </p>
-    <a href='https://www.instagram.com/21_tarot_and_coffee/' target='_blank' class='inline-block'>
-      <Icon
-        name='ph:instagram-logo-light'
-        class='size-16 text-malach hover:motion-safe:animate-ping'
-      />
-    </a>
-  </section>
-</article>
+<ProjectsLayout
+  imageHref={layoutProps.imageHref}
+  projectTitle={layoutProps.projectTitle}
+  projectParagraph={layoutProps.projectParagraph}
+  firstIconHref={layoutProps.firstIconHref}
+>
+  <Image
+    slot='project-image'
+    src={sid}
+    alt='Screenshot of a branding picture for a London cafe. It depicts a menu, a coffe cup, a receipt, a loyalty card and food wrapping paper, all branded.'
+    class='image-style'
+  />
+  <Icon
+    slot='first-icon'
+    name='ph:instagram-logo-light'
+    title='Neon green minimalist version of the Instagram logo.'
+    class='icon-style'
+  />
+</ProjectsLayout>
