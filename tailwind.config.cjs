@@ -14,10 +14,19 @@ export default {
         deepp: '#8c52ff',
         malach: '#00ff41',
       },
+
       fontFamily: {
         matrix: ['Antimatrix', 'Matrix', 'GarishMonde', 'ui-monospace'],
         // FIXME: Find out why some fonts work and some others do not
-        capa: ['SyneMono', 'MajorMono', 'NovaMono', '"Courier New"'],
+        capa: [
+          'MartianMono',
+          'RedHatMono',
+          'AzeretMono',
+          'RubikMono',
+          'MajorMono',
+          'SyneMono',
+          '"Liberation Mono"',
+        ],
       },
     },
   },

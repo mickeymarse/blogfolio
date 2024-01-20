@@ -38,7 +38,7 @@ export default function TypedIntro() {
           .pauseFor(2000)
           .deleteAll(25)
           .typeString(`See you soon :3 `)
-          .pauseFor(2000)
+          .pauseFor(3000)
           .start();
       }}
     />
