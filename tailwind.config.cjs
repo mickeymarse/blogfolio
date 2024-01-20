@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        back: '#44443f',
-        back2: '#44443f80',
+        back: '#00000033',
+        back2: '#000000f2',
+        backg: '#44443f33',
+        backg2: '#44443fe6',
         neonp: '#FB48C4',
         reddish: '#ff5757',
         pinkish: '#ffecdb',
@@ -20,5 +22,5 @@ export default {
     },
   },
 
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

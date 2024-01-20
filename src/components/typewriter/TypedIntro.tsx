@@ -9,7 +9,7 @@ export default function TypedIntro() {
         cursor: '_',
         delay: 100,
         cursorClassName: 'text-neonp text-5xl font-mono motion-safe:animate-ping',
-        wrapperClassName: 'text-white text-6xl font-matrix font-bold',
+        wrapperClassName: ' text-6xl font-matrix font-bold',
       }}
       onInit={(typewriter) => {
         typewriter

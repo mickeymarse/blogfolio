@@ -23,7 +23,7 @@ export default function Navbar() {
     // TODO: Add icons to toggle canvas and dark mode
     <nav
       id='navbar'
-      className={`sticky top-0 left-0 px-5 py-1 w-full flex justify-between font-matrix font-bold text-2xl text-white z-50 ${
+      className={`sticky top-0 left-0 px-5 py-1 w-full flex justify-between font-matrix font-bold text-2xl  z-50 ${
         isScrolled ? 'bg-back2 rounded h-20 text-4xl' : 'bg-transparent'
       }`}
     >
