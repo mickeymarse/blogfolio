@@ -5,7 +5,7 @@ export default function TypedProjects() {
     <TypewriterComponent
       options={{
         autoStart: true,
-        cursor: '_',
+        cursor: '|',
         delay: 100,
         cursorClassName: 'text-neonp text-5xl font-mono motion-safe:animate-pulse',
         wrapperClassName: ' text-6xl font-matrix font-bold',
