@@ -44,6 +44,7 @@ export default function Navbar() {
         <a href='/if' className={navlink}>
           Fiction
         </a>
+        {/* TODO: Add CV!!! */}
       </section>
       {/* TODO: Check how to insert icons */}
       <section className='flex flex-row gap-x-5'>
