@@ -4,12 +4,14 @@ import TypedIntro from '../components/typewriter/TypedIntro.tsx';
 import TypedProjects from '../components/typewriter/TypedProjects.tsx';
 import TypedAbout from '../components/typewriter/TypedAbout.tsx';
 import TypedTech from '../components/typewriter/TypedTech.tsx';
+import TypedContact from '../components/typewriter/TypedContact.tsx';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import RR from '../components/work/RR.astro';
 import SOCS from '../components/work/SOCS.astro';
 import SID from '../components/work/SID.astro';
 import TechStack from '../components/TechStack.astro';
 import About from '../texts/About.mdx';
+import Contact from '../texts/Contact.mdx';
 ---
 
 <BaseLayout title=`Mickey's Portfolio`>
@@ -45,6 +47,12 @@ import About from '../texts/About.mdx';
         <TypedAbout client:visible />
       </header>
       <About />
+    </section>
+    <section id='about' class='my-24 grid'>
+      <header class='place-self-end'>
+        <TypedContact client:visible />
+      </header>
+      <Contact />
     </section>
   </main>
 </BaseLayout>

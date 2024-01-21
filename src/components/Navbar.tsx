@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
-    'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back';
+    'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
 
   useEffect(() => {
     console.log('useEffect called');
@@ -42,13 +42,13 @@ export default function Navbar() {
           Blog
         </a>
         <a href='/if' className={navlink}>
-          IF
+          Fiction
         </a>
       </section>
       {/* TODO: Check how to insert icons */}
       <section className='flex flex-row gap-x-5'>
-        <p className={navlink}>moon</p>
-        <p className={navlink}>code</p>
+        {/* <p className={navlink}>moon</p>
+        <p className={navlink}>code</p> */}
       </section>
     </nav>
   );
