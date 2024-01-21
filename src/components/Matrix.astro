@@ -1,0 +1,81 @@
+---
+
+---
+
+<canvas transition:persist id='Matrix' class='h-full w-full block fixed top-0 left-0 -z-50'
+></canvas>
+
+<script defer>
+  // 2D context & whole viewport width + height
+  const canvas = document.getElementById('Matrix');
+  const context = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // "Alphabet" used for rain
+  const name = 'Michele Maria';
+  const aka = 'Mickey';
+  const surname = 'Serrapica';
+
+  const alphabet = name + aka + surname;
+
+  // Number of rain columns
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+
+  // Array to store and render raindrops
+  const rainDrops = [];
+
+  for (let x = 0; x < columns; x++) {
+    rainDrops[x] = 1;
+  }
+
+  // Set background/trail, font size and color, loop for the raindrops.
+  // Picking alphabet letters in order
+  let counter = 0;
+
+  const draw = () => {
+    context.fillStyle = '#00000033';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = '#8c52ffb3';
+    context.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < rainDrops.length; i++) {
+      const text = alphabet.charAt(counter % alphabet.length); // Use the counter to get the next character from the alphabet
+      context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+      rainDrops[i]++;
+
+      counter++;
+    }
+  };
+  {
+    /*
+  // With random character selection
+  const draw = () => {
+    context.fillStyle = 'rgba(68, 68, 63, 0.2)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = '#8c52ff';
+    context.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < rainDrops.length; i++) {
+      const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+      context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+      rainDrops[i]++;
+    }
+  };*/
+  }
+
+  // Interval for calling function
+  setInterval(draw, 90);
+</script>
