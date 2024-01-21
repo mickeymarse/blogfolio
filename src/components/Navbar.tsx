@@ -23,7 +23,7 @@ export default function Navbar() {
     // TODO: Add icons to toggle canvas and dark mode
     <nav
       id='navbar'
-      className={`sticky top-0 left-0 px-5 py-1 w-full flex justify-between font-matrix font-bold text-2xl  z-50 ${
+      className={`sticky top-0 left-0 px-5 py-1 w-full flex justify-between font-sans font-bold text-2xl  z-50 ${
         isScrolled ? 'bg-back2 rounded h-20 text-4xl' : 'bg-transparent'
       }`}
     >
@@ -44,7 +44,14 @@ export default function Navbar() {
         <a href='/if' className={navlink}>
           Fiction
         </a>
-        {/* TODO: Add CV!!! */}
+        <a
+          href='/MicheleMariaSerrapica_CV.pdf'
+          target='blank'
+          type='application/pdf'
+          className={navlink}
+        >
+          CV
+        </a>
       </section>
       {/* TODO: Check how to insert icons */}
       <section className='flex flex-row gap-x-5'>

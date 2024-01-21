@@ -5,10 +5,10 @@ export default function TypedAbout() {
     <TypewriterComponent
       options={{
         autoStart: true,
-        cursor: '_',
+        cursor: '|',
         delay: 100,
         cursorClassName: 'text-neonp text-5xl font-mono motion-safe:animate-pulse',
-        wrapperClassName: ' text-6xl font-matrix font-bold',
+        wrapperClassName: ' text-6xl font-sans font-bold',
       }}
       onInit={(typewriter) => {
         typewriter.typeString(`Who Am I`).start();

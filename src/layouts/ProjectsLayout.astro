@@ -17,7 +17,7 @@ const { imageHref, projectTitle, projectParagraph, firstIconHref, secondIconHref
     <slot name='project-image' />
   </a>
   <section class='mx-5 my-0 w-8/12'>
-    <h3 class='text-3xl font-capa font-bold -mt-1'>{projectTitle}</h3>
+    <h3 class='text-3xl font-sans font-bold -mt-1'>{projectTitle}</h3>
     <p class='text-xl font-mono font-extralight mt-3 mb-3'>
       {projectParagraph}
     </p>
@@ -35,7 +35,7 @@ const { imageHref, projectTitle, projectParagraph, firstIconHref, secondIconHref
 <!-- FIXME: check for workaround for the tailind classes bug in apply -->
 <style is:global>
   .icon-style {
-    @apply size-16 text-neonp hover:animate-ping;
+    @apply size-16 px-1 text-neonp hover:animate-ping;
   }
   .image-style {
     @apply size-full rounded-lg hover:opacity-50;
