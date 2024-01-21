@@ -9,7 +9,7 @@ export default function TypedIntro() {
         cursor: '|',
         delay: 100,
         cursorClassName: 'text-neonp text-5xl font-mono motion-safe:animate-ping',
-        wrapperClassName: ' text-6xl font-matrix font-bold',
+        wrapperClassName: ' text-7xl font-sans font-bold',
       }}
       onInit={(typewriter) => {
         typewriter
@@ -35,10 +35,10 @@ export default function TypedIntro() {
           .typeString(`Have a look around... `)
           .pauseFor(2000)
           .deleteAll(25)
-          .typeString(`... and enjoy your stay :) `)
+          .typeString(`... and enjoy your stay 😊 `)
           .pauseFor(2000)
           .deleteAll(25)
-          .typeString(`See you soon :3 `)
+          .typeString(`See you soon 🩷 `)
           .pauseFor(3000)
           .start();
       }}

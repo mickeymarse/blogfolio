@@ -17,16 +17,16 @@ import Contact from '../texts/Contact.mdx';
 <BaseLayout title=`Mickey's Portfolio`>
   <!-- TODO: Check issue with fade transition -->
   <main class='grid px-40'>
-    <section class='mt-60 mb-56 place-self-center'>
+    <section class='my-60 place-self-center'>
       <TypedIntro client:load />
     </section>
     <Icon
       name='ph:arrow-circle-down-light'
       title='Neon green circled arrow down icon.'
-      class='text-neonp size-16 motion-safe:animate-pulse mb-24 place-self-center'
+      class='text-neonp size-20 motion-safe:animate-pulse mb-60 place-self-center'
     />
 
-    <section id='work' class='my-24 grid'>
+    <section id='work' class='mb-24 mt-40 grid'>
       <header class='place-self-end mb-24'>
         <TypedProjects client:visible />
       </header>
@@ -36,7 +36,7 @@ import Contact from '../texts/Contact.mdx';
         <SOCS />
       </article>
     </section>
-    <section id='about' class='my-24 grid'>
+    <section class='my-24 grid'>
       <header class='place-self-end'>
         <TypedTech client:visible />
       </header>
