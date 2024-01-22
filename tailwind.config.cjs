@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        back: '#00000033',
-        back2: '#000000f2',
-        backg: '#44443f33',
-        backg2: '#44443fe6',
+        black: '#00000033',
+        black2: '#000000f2',
+        back: '#07070633',
+        back2: '#070706e6',
         neonp: '#FB48C4',
         reddish: '#ff5757',
         pinkish: '#ffecdb',

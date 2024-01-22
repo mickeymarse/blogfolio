@@ -13,7 +13,7 @@ export default function TypedIntro() {
       }}
       onInit={(typewriter) => {
         typewriter
-          .pauseFor(3000)
+          .pauseFor(4500)
           .typeString(`Welcome to my virtual abode`)
           .pauseFor(2500)
           .deleteAll(25)
@@ -35,11 +35,11 @@ export default function TypedIntro() {
           .typeString(`Have a look around... `)
           .pauseFor(2000)
           .deleteAll(25)
-          .typeString(`... and enjoy your stay. `)
+          .typeString(`... and enjoy your stay.`)
           .pauseFor(2000)
           .deleteAll(25)
-          .typeString(`See you soon! `)
-          .pauseFor(3000)
+          .typeString(`See you soon!`)
+          .pauseFor(2000)
           .start();
       }}
     />
