@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Navbar({ homeIcon }) {
+export default function Navbar({ homeIcon }: any) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
