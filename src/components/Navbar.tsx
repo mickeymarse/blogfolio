@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
@@ -28,9 +28,8 @@ export default function Navbar() {
       }`}
     >
       <section className='flex flex-row gap-x-5'>
-        {/* TODO: Possibly use hash icon instead */}
         <a href='/' className={`${navlink} text-neonp motion-safe:animate-pulse`}>
-          _
+          {props.homeIcon}
         </a>
         <a href='/#work' className={navlink}>
           Work
@@ -53,7 +52,6 @@ export default function Navbar() {
           CV
         </a>
       </section>
-      {/* TODO: Check how to insert icons */}
       <section className='flex flex-row gap-x-5'>
         {/* <p className={navlink}>moon</p>
         <p className={navlink}>code</p> */}

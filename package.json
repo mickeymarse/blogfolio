@@ -16,7 +16,6 @@
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/devicon-plain": "^1.1.34",
     "@iconify-json/mdi": "^1.1.64",
-    "@iconify-json/ph": "^1.1.10",
     "@iconify-json/simple-icons": "^1.1.88",
     "@iconify-json/tabler": "^1.1.104",
     "@types/react": "^18.2.46",

@@ -2,6 +2,7 @@
 import Matrix from '../components/Matrix.astro';
 import Navbar from '../components/Navbar.tsx';
 import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon/components';
 
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
@@ -24,8 +25,16 @@ const { title } = Astro.props;
   </head>
   <body class='bg-back text-white'>
     <Matrix />
-    <Navbar client:load />
+    <Navbar client:load>
+      <Icon
+        slot='homeIcon'
+        name='mdi:pound'
+        title='Neon pink hash symbol.'
+        class='motion-safe:animate-pulse'
+      />
+    </Navbar>
     <slot />
     <Footer />
-  </body><!-- TODO: Create a "white" palette for the text. -->
+    <!-- TODO: Create a "white" palette for the text. -->
+  </body>
 </html>
