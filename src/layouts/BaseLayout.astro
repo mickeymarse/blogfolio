@@ -8,15 +8,8 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
 }
-interface IconProps {
-  slot: string;
-  name: string;
-  title?: string;
-  class?: string;
-}
 
 const { title } = Astro.props;
-export let props: IconProps;
 ---
 
 <!doctype html>

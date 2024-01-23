@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react';
-import pkg from 'react';
-const { ReactNode } = pkg;
 
-interface NavbarProps {
-  children: 'typeof ReactNode';
-}
-
-export default function Navbar({ homeIcon }: { homeIcon: NavbarProps }) {
+export default function Navbar({ homeIcon }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
