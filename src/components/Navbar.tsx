@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+// FIXME: Add type properly
 export default function Navbar({ homeIcon }: any) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
