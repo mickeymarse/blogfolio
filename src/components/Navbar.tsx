@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
+import pkg from 'react';
+const { ReactNode } = pkg;
 
-export default function Navbar(props) {
+interface NavbarProps {
+  children: ReactNode;
+}
+
+export default function Navbar({ homeIcon }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const navlink =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
@@ -29,7 +35,7 @@ export default function Navbar(props) {
     >
       <section className='flex flex-row gap-x-5'>
         <a href='/' className={`${navlink} text-neonp motion-safe:animate-pulse`}>
-          {props.homeIcon}
+          {homeIcon}
         </a>
         <a href='/#work' className={navlink}>
           Work
