@@ -2,30 +2,113 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<!-- TODO: add title attr to icons -->
 <article class='grid grid-cols-8 grid-rows-6 justify-items-center my-24 gap-10'>
-  <Icon name='devicon-plain:astro' class='techIcon' />
-  <Icon name='mdi:react' class='techIcon col-start-2 row-start-2' />
-  <Icon name='devicon-plain:nextjs' class='techIcon col-start-3 row-start-1' />
-  <Icon name='devicon-plain:nodejs-wordmark' class='techIcon col-start-4 row-start-2' />
-  <Icon name='devicon-plain:vitejs' class='techIcon col-start-5 row-start-1' />
-  <Icon name='devicon-plain:javascript' class='techIcon col-start-6 row-start-2' />
-  <Icon name='devicon-plain:html5' class='techIcon col-start-7 row-start-1' />
-  <Icon name='devicon-plain:css3' class='techIcon col-start-8 row-start-2' />
-  <Icon name='mdi:tailwind' class='techIcon row-start-3' />
-  <Icon name='devicon-plain:vitest' class='techIcon col-start-2 row-start-4' />
-  <Icon name='devicon-plain:playwright' class='techIcon col-start-3 row-start-3' />
-  <Icon name='devicon-plain:postgresql' class='techIcon col-start-4 row-start-4' />
-  <Icon name='tabler:brand-react-native' class='techIcon col-start-5 row-start-3' />
-  <Icon name='simple-icons:expo' class='techIcon col-start-6 row-start-4' />
-  <Icon name='simple-icons:chakraui' class='techIcon col-start-7 row-start-3' />
-  <Icon name='devicon-plain:typescript' class='techIcon col-start-8 row-start-4' />
-  <Icon name='devicon-plain:git' class='techIcon row-start-5' />
-  <Icon name='simple-icons:figma' class='techIcon col-start-3 row-start-5' />
-  <Icon name='simple-icons:express' class='techIcon col-start-5 row-start-5' />
-  <Icon name='devicon-plain:gimp' class='techIcon col-start-7 row-start-5' />
-  <Icon name='simple-icons:kdenlive' class='techIcon col-start-2 row-start-6' />
-  <Icon name='simple-icons:audacity' class='techIcon col-start-6 row-start-6' />
+  <Icon title='Neon pink version of the Astro logo.' name='devicon-plain:astro' class='techIcon' />
+  <Icon
+    title='Neon pink version of the React logo.'
+    name='mdi:react'
+    class='techIcon col-start-2 row-start-2'
+  />
+  <Icon
+    title='Neon pink version of the Next.js logo.'
+    name='devicon-plain:nextjs'
+    class='techIcon col-start-3 row-start-1'
+  />
+  <Icon
+    title='Neon pink version of the Node.js logo.'
+    name='devicon-plain:nodejs-wordmark'
+    class='techIcon col-start-4 row-start-2'
+  />
+  <Icon
+    title='Neon pink version of the Vite logo.'
+    name='devicon-plain:vitejs'
+    class='techIcon col-start-5 row-start-1'
+  />
+  <Icon
+    title='Neon pink version of the Javascript logo.'
+    name='devicon-plain:javascript'
+    class='techIcon col-start-6 row-start-2'
+  />
+  <Icon
+    title='Neon pink version of the HTML logo.'
+    name='devicon-plain:html5'
+    class='techIcon col-start-7 row-start-1'
+  />
+  <Icon
+    title='Neon pink version of the CSS logo.'
+    name='devicon-plain:css3'
+    class='techIcon col-start-8 row-start-2'
+  />
+  <Icon
+    title='Neon pink version of the Tailwind logo.'
+    name='mdi:tailwind'
+    class='techIcon row-start-3'
+  />
+  <Icon
+    title='Neon pink version of the Vitest logo.'
+    name='devicon-plain:vitest'
+    class='techIcon col-start-2 row-start-4'
+  />
+  <Icon
+    title='Neon pink version of the Playwright logo.'
+    name='devicon-plain:playwright'
+    class='techIcon col-start-3 row-start-3'
+  />
+  <Icon
+    title='Neon pink version of the PostgreSQL logo.'
+    name='devicon-plain:postgresql'
+    class='techIcon col-start-4 row-start-4'
+  />
+  <Icon
+    title='Neon pink version of the React Native logo.'
+    name='tabler:brand-react-native'
+    class='techIcon col-start-5 row-start-3'
+  />
+  <Icon
+    title='Neon pink version of the Expo logo.'
+    name='simple-icons:expo'
+    class='techIcon col-start-6 row-start-4'
+  />
+  <Icon
+    title='Neon pink version of the ChakraUI logo.'
+    name='simple-icons:chakraui'
+    class='techIcon col-start-7 row-start-3'
+  />
+  <Icon
+    title='Neon pink version of the Typescript logo.'
+    name='devicon-plain:typescript'
+    class='techIcon col-start-8 row-start-4'
+  />
+  <Icon
+    title='Neon pink version of the git logo.'
+    name='devicon-plain:git'
+    class='techIcon row-start-5'
+  />
+  <Icon
+    title='Neon pink version of the Figma logo.'
+    name='simple-icons:figma'
+    class='techIcon col-start-3 row-start-5'
+  />
+  <Icon
+    title='Neon pink version of the Express logo.'
+    name='simple-icons:express'
+    class='techIcon col-start-5 row-start-5'
+  />
+  <Icon
+    title='Neon pink version of the GIMP logo.'
+    name='devicon-plain:gimp'
+    class='techIcon col-start-7 row-start-5'
+  />
+  <Icon
+    title='Neon pink version of the Kdenlive logo.'
+    name='simple-icons:kdenlive'
+    class='techIcon col-start-2 row-start-6'
+  />
+  <Icon
+    title='Neon pink version of the Audacity logo.'
+    name='simple-icons:audacity'
+    class='techIcon col-start-6 row-start-6'
+  />
 </article>
 
 <style>
@@ -33,53 +116,3 @@ import { Icon } from 'astro-icon/components';
     @apply size-20 text-neonp;
   }
 </style>
-
-<!-- <div class="grid grid-cols-8 grid-rows-6 gap-4">
-  <div >1</div>
-  <div class="col-start-2 row-start-2">2</div>
-  <div class="col-start-3 row-start-1">3</div>
-  <div class="col-start-4 row-start-2">4</div>
-  <div class="col-start-5 row-start-1">5</div>
-  <div class="col-start-6 row-start-2">6</div>
-  <div class="col-start-7 row-start-1">7</div>
-  <div class="col-start-8 row-start-2">8</div>
-  <div class="row-start-3">9</div>
-  <div class="col-start-2 row-start-4">10</div>
-  <div class="col-start-3 row-start-3">11</div>
-  <div class="col-start-4 row-start-4">12</div>
-  <div class="col-start-5 row-start-3">13</div>
-  <div class="col-start-6 row-start-4">14</div>
-  <div class="col-start-7 row-start-3">15</div>
-  <div class="col-start-8 row-start-4">16</div>
-  <div class="row-start-5">17</div>
-  <div class="col-start-3 row-start-5">18</div>
-  <div class="col-start-5 row-start-5">19</div>
-  <div class="col-start-7 row-start-5">20</div>
-  <div class="col-start-2 row-start-6">21</div>
-  <div class="col-start-6 row-start-6">22</div>
-</div> -->
-
-<!-- <div class="grid grid-cols-5 grid-rows-10 gap-4">
-  <div >1</div>
-  <div class="col-start-2 row-start-2">2</div>
-  <div class="col-start-3 row-start-1">3</div>
-  <div class="col-start-4 row-start-2">4</div>
-  <div class="col-start-5 row-start-1">5</div>
-  <div class="row-start-3">6</div>
-  <div class="col-start-2 row-start-4">7</div>
-  <div class="col-start-3 row-start-3">8</div>
-  <div class="col-start-4 row-start-4">9</div>
-  <div class="col-start-5 row-start-3">10</div>
-  <div class="row-start-5">11</div>
-  <div class="col-start-2 row-start-6">12</div>
-  <div class="col-start-3 row-start-5">13</div>
-  <div class="col-start-4 row-start-6">14</div>
-  <div class="col-start-5 row-start-5">15</div>
-  <div class="row-start-7">16</div>
-  <div class="col-start-2 row-start-8">17</div>
-  <div class="col-start-3 row-start-7">18</div>
-  <div class="col-start-4 row-start-8">19</div>
-  <div class="col-start-5 row-start-7">20</div>
-  <div class="row-start-9">21</div>
-  <div class="col-start-5 row-start-9">22</div>
-</div> -->
