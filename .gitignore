@@ -22,3 +22,4 @@ pnpm-debug.log*
 
 # extras
 package-lock.json
+.vscode
