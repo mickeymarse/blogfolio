@@ -6,9 +6,7 @@ export default function Navbar({ homeIcon }: any) {
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
 
   useEffect(() => {
-    console.log('useEffect called');
     const handleScroll = () => {
-      console.log('Scrolling');
       setIsScrolled(window.scrollY > 200);
     };
 

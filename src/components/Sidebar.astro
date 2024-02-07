@@ -1,0 +1,18 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<Icon
+  slot='menuIcon'
+  name='mdi:microsoft-xbox-controller-menu'
+  title='Burger menu icon'
+  id='burger'
+  class='md:hidden size-16 text-neonp sticky top-5 left-5'
+/>
+<aside class='hidden'>ciao</aside>
+
+<script>
+  document.getElementById('burger')?.addEventListener('click', () => {
+    alert('Clicked!');
+  });
+</script>

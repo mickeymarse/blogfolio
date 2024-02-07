@@ -1,11 +1,11 @@
 ---
 import Matrix from '../components/Matrix.astro';
 import Navbar from '../components/Navbar.tsx';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
 import { Icon } from 'astro-icon/components';
-
 import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
   title: string;
 }
@@ -34,14 +34,8 @@ const { title } = Astro.props;
         class='motion-safe:animate-pulse'
       />
     </Navbar>
-    <Sidebar client:load>
-      <Icon
-        slot='homeIcon'
-        name='mdi:pound'
-        title='Neon pink hash symbol.'
-        class='motion-safe:animate-pulse'
-      />
-    </Sidebar>
+    <Sidebar client:load />
+
     <slot />
     <Footer />
     <!-- TODO: Create a "white" palette for the text. -->
