@@ -3,16 +3,21 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <Icon
-  slot='menuIcon'
   name='mdi:microsoft-xbox-controller-menu'
   title='Burger menu icon'
   id='burger'
   class='md:hidden size-16 text-neonp sticky top-5 left-5'
 />
-<aside class='hidden'>ciao</aside>
-
+<Icon
+  name='mdi:alpha-x-circle'
+  title='X icon'
+  id='x'
+  class='hidden md:hidden size-16 text-neonp sticky top-5 left-5'
+/>
+<aside id='sidebar' class='hidden'>ciao</aside>
+<!-- TODO: Add type definitions for jQuery -->
 <script>
-  document.getElementById('burger')?.addEventListener('click', () => {
-    alert('Clicked!');
+  $('#burger, #x').on('click', () => {
+    $('#sidebar, #burger, #x').toggle();
   });
 </script>
