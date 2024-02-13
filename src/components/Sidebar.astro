@@ -3,45 +3,69 @@ import { Icon } from 'astro-icon/components';
 import $ from 'jquery';
 ---
 
-<aside id='sidebar' class='hidden sticky top-0 left-0 bg-back2 w-1/2 h-dvh'>
-  <Icon name='mdi:alpha-x-circle' title='X icon' id='x' class='hidden md:hidden menuicon' />
-  <nav class='flex flex-col justify-evenly h-96 py-10 px-5'>
-    <a href='/' class='navlink text-neonp motion-safe:animate-pulse'>
-      <Icon
-        slot='homeIcon'
-        name='mdi:pound'
-        title='Neon pink hash symbol.'
-        class='motion-safe:animate-pulse'
-      />
-    </a>
-    <a href='/#work' class='navlink'>Work</a>
-    <a href='/#about' class='navlink'>About</a>
-    <a href='/blog' class='navlink'>Blog</a>
-    <a href='/if' class='navlink'>Fiction</a>
-    <a href='/MicheleMariaSerrapica_CV.pdf' target='blank' type='application/pdf' class='navlink'
-      >CV</a
-    >
-  </nav>
-</aside>
-<Icon
-  name='mdi:microsoft-xbox-controller-menu'
-  title='Burger menu icon'
-  id='burger'
-  class='md:hidden menuicon'
-/>
+<!-- FIXME: Make component less buggy. -->
+<astro-sidebar>
+  <aside id='sidebar' class='top-0 left-0 w-9/12 h-dvh bg-back2'>
+    <Icon
+      name='mdi:alpha-x-circle'
+      title='X icon'
+      id='x'
+      class='hidden md:hidden menuicon absolute'
+    />
+    <nav class='flex flex-col mt-20 h-96 py-10 px-5'>
+      <a href='/' class='navlink text-neonp motion-safe:animate-pulse'>
+        <Icon
+          slot='homeIcon'
+          name='mdi:pound'
+          title='Neon pink hash symbol.'
+          class='motion-safe:animate-pulse'
+        />
+      </a>
+      <a href='/#work' class='navlink'>Work</a>
+      <a href='/#about' class='navlink'>About</a>
+      <a href='/blog' class='navlink'>Blog</a>
+      <a href='/if' class='navlink'>Fiction</a>
+      <a href='/MicheleMariaSerrapica_CV.pdf' target='blank' type='application/pdf' class='navlink'
+        >CV</a
+      >
+    </nav>
+  </aside>
+  <Icon
+    name='mdi:microsoft-xbox-controller-menu'
+    title='Burger menu icon'
+    id='burger'
+    class='md:hidden menuicon sticky'
+  />
+</astro-sidebar>
 
 <style>
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+  }
+
+  #sidebar.active {
+    transform: translateX(0);
+  }
   .navlink {
-    @apply text-2xl w-fit rounded border-4 border-transparent hover:bg-neonp hover:text-back2;
+    @apply text-4xl leading-loose w-fit rounded border-4 border-transparent hover:bg-neonp hover:text-back2;
   }
   .menuicon {
-    @apply size-16 text-neonp sticky top-5 left-5;
+    @apply size-16 text-neonp top-5 left-5;
   }
 </style>
 
-<!-- FIXME: Make script work globally. -->
 <script>
-  $('#burger, #x').on('click', () => {
-    $('#sidebar, #burger, #x').toggle();
-  });
+  class Sidebar extends HTMLElement {
+    constructor() {
+      super();
+      $('#burger, #x').on('click', () => {
+        $('#sidebar').toggleClass('active');
+        $('#burger, #x').toggle();
+      });
+    }
+  }
+
+  customElements.define('astro-sidebar', Sidebar);
 </script>
