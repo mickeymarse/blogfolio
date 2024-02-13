@@ -3,20 +3,43 @@ import { Icon } from 'astro-icon/components';
 import $ from 'jquery';
 ---
 
+<aside id='sidebar' class='hidden sticky top-0 left-0 bg-malach w-1/2 h-dvh'>
+  <Icon name='mdi:alpha-x-circle' title='X icon' id='x' class='hidden md:hidden menuicon' />
+  <nav class='flex flex-col py-10'>
+    <a href='/' class='navlink text-neonp motion-safe:animate-pulse'>
+      <Icon
+        slot='homeIcon'
+        name='mdi:pound'
+        title='Neon pink hash symbol.'
+        class='motion-safe:animate-pulse'
+      />
+    </a>
+    <a href='/#work' class='navlink'> Work</a>
+    <a href='/#about' class='navlink'> About</a>
+    <a href='/blog' class='navlink'> Blog</a>
+    <a href='/if' class='navlink'> Fiction</a>
+    <a href='/MicheleMariaSerrapica_CV.pdf' target='blank' type='application/pdf' class='navlink'>
+      CV
+    </a>
+  </nav>
+</aside>
 <Icon
   name='mdi:microsoft-xbox-controller-menu'
   title='Burger menu icon'
   id='burger'
-  class='md:hidden size-16 text-neonp sticky top-5 left-5'
+  class='md:hidden menuicon'
 />
-<Icon
-  name='mdi:alpha-x-circle'
-  title='X icon'
-  id='x'
-  class='hidden md:hidden size-16 text-neonp sticky top-5 left-5'
-/>
-<aside id='sidebar' class='hidden'>ciao</aside>
-<!-- TODO: Add type definitions for jQuery -->
+
+<style>
+  .navlink {
+    @apply rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2;
+  }
+  .menuicon {
+    @apply size-16 text-neonp sticky top-5 left-5;
+  }
+</style>
+
+<!-- FIXME: Make script work globally. -->
 <script>
   $('#burger, #x').on('click', () => {
     $('#sidebar, #burger, #x').toggle();
