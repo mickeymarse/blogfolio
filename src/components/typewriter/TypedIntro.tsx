@@ -23,7 +23,7 @@ export default function TypedIntro() {
           .pauseFor(3000)
           .changeDeleteSpeed(25)
           .deleteChars(23)
-          .typeString(`a Full Stack Developer`)
+          .typeString(`a Junior Full Stack Dev`)
           .pauseFor(3000)
           .changeDeleteSpeed(25)
           .deleteChars(26)
