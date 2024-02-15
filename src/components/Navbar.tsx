@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 // FIXME: Add type properly
 export default function Navbar({ homeIcon }: any) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navlink =
+  const navlink: string =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
 
   useEffect(() => {
