@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react';
 // FIXME: Add type properly
 export default function Navbar({ homeIcon }: any) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navlink =
+  const navlink: string =
     'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
 
   useEffect(() => {
-    console.log('useEffect called');
     const handleScroll = () => {
-      console.log('Scrolling');
       setIsScrolled(window.scrollY > 200);
     };
 
@@ -23,7 +21,7 @@ export default function Navbar({ homeIcon }: any) {
     // TODO: Add icons to toggle canvas and dark mode
     <nav
       id='navbar'
-      className={`sticky top-0 left-0 px-5 py-1 w-full flex justify-between font-sans font-bold text-2xl  z-50 ${
+      className={`sticky top-0 left-0 px-5 py-1 w-full hidden md:flex justify-between font-sans font-bold text-2xl  z-50 ${
         isScrolled ? 'bg-back2 rounded h-20 text-4xl' : 'bg-transparent'
       }`}
     >

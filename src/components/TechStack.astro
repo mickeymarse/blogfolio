@@ -2,7 +2,9 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<article class='grid grid-cols-8 grid-rows-6 justify-items-center my-24 gap-10'>
+<article
+  class='grid grid-cols-8 grid-rows-6 justify-items-center px-2 md:px-0 my-24 gap-8 md:gap-10'
+>
   <Icon title='Neon pink version of the Astro logo.' name='devicon-plain:astro' class='techIcon' />
   <Icon
     title='Neon pink version of the React logo.'
@@ -113,6 +115,6 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   .techIcon {
-    @apply size-20 text-neonp;
+    @apply size-14 md:size-16 xl:size-20 text-neonp;
   }
 </style>
