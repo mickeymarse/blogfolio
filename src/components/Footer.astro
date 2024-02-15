@@ -4,15 +4,21 @@ import Copyright from './Copyright.tsx';
 ---
 
 <!-- FIXME: Make text and icons starting from the bottom. -->
-<footer class='bottom-0 grid grid-rows-2 justify-center my-5 text-xs font-mono'>
+<footer
+  class='bottom-0 grid grid-rows-2 justify-center my-5 text-xs md:text-sm xl:text-base font-mono'
+>
   <p class='font-mono inline-block mx-auto'>
     Made with
-    <Icon name='tabler:pill' title='Neon pink pill icon.' class='size-5 inline-block text-neonp' />
+    <Icon
+      name='tabler:pill'
+      title='Neon pink pill icon.'
+      class='size-5 xl:size-7 inline-block text-neonp'
+    />
     and
     <Icon
       name='devicon-plain:astro'
       title='Neon pink version of the Astro logo.'
-      class='size-5 inline-block text-neonp'
+      class='size-5 xl:size-7 inline-block text-neonp'
     />.
   </p>
   <Copyright />
