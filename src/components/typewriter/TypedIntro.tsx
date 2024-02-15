@@ -1,7 +1,7 @@
 import TypewriterComponent from 'typewriter-effect';
 // FIXME: How to prevent whole page being pushed down when text jump on new isLineBreak. Maybe responsiveness?
 export default function TypedIntro() {
-  const textSize: string = 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl';
+  const textSize: string = 'text-2xl md:text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl';
 
   return (
     <TypewriterComponent
@@ -23,11 +23,11 @@ export default function TypedIntro() {
           .pauseFor(3000)
           .changeDeleteSpeed(25)
           .deleteChars(23)
-          .typeString(`a Full Stack Web Developer`)
+          .typeString(`a Full Stack Developer`)
           .pauseFor(3000)
           .changeDeleteSpeed(25)
           .deleteChars(26)
-          .typeString(`a speculative fiction writer`)
+          .typeString(`a fiction writer`)
           .pauseFor(3000)
           .changeDeleteSpeed(25)
           .deleteChars(28)
