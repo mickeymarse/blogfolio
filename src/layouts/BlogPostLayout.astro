@@ -17,7 +17,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
       <section aria-label='Section containing the text of the blog post.'>
         <section aria-label='Section containing the title of the blog post.'>
           <section aria-label='Section containing the published date of the blog post.'>
-            {pubDate}
+            {pubDate.toString().slice(4, 16)}
           </section>
           <h1>{title}</h1>
           <hr />
