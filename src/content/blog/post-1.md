@@ -1,0 +1,12 @@
+---
+title: 'Transitioning into tech while technically transitioning'
+description: 'My first blog post. About why I did want a blog in the first place and what is the deal with the Matrix rain background.'
+pubDate: 2024-02-19
+heroImage:
+  {
+    src: '/blog-images/post-1/truck1.png',
+    alt: 'A dithered image of an orange truck speeding on the highway. On its side we can read TECH-TRANS.',
+  }
+---
+
+Here we go. Let's se if this works.
