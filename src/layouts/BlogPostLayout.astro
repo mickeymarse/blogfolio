@@ -9,5 +9,57 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <main class='w-lvw grid px-5 md:px-20 lg:px-32 xl:px-40'></main>
+  <main class='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <article>
+      <figure class='w-full'>
+        {
+          heroImage && (
+            <img
+              class='block mx-auto rounded-lg shadow-lg w-{1020} h-{510}'
+              src={heroImage.src}
+              alt={heroImage.alt}
+            />
+          )
+        }
+        {heroImage && <figcaption>{heroImage.alt}</figcaption>}
+      </figure>
+      <section class='prose' aria-label='Section containing the text of the blog post.'>
+        <section class='title' aria-label='Section containing the title of the blog post.'>
+          <section
+            class='date'
+            aria-label='Section containing the published date of the blog post.'
+          >
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <section
+                  class='font-italic'
+                  aria-label='Section containing the updated published date of the blog post.'
+                >
+                  Last updated on <FormattedDate date={updatedDate} />
+                </section>
+              )
+            }
+          </section>
+          <h1 class='mb-2 text-3xl font-bold'>{title}</h1>
+          <hr />
+        </section>
+        <slot />
+      </section>
+    </article>
+  </main>
 </BaseLayout>
+
+<style>
+  .prose {
+    @apply w-[720px] max-w-[calc(100%-2em)] mx-auto p-4text-gray-dark;
+  }
+
+  .title {
+    @apply mb-4 text-center;
+  }
+
+  .date {
+    @apply mb-2 text-gray-500;
+  }
+</style>
