@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
+<!-- FIXME: Check why link is clickable form outside pic. -->
 <BaseLayout title='Blog'>
   <main class='w-lvw mt-32 grid px-5 md:px-20 lg:px-32 xl:px-40'>
     <ul
