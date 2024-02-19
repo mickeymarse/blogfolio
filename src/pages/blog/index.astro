@@ -6,22 +6,39 @@ const posts = await getCollection('blog');
 ---
 
 <BaseLayout title='Blog'>
-  <main>
-    <section>
-      <ul>
-        {
-          posts.map((post) => (
-            <li>
-              <a href={`/blog/${post.slug}/`}>
-                <img src={post.data.heroImage.src} alt={post.data.heroImage.alt} />
-                <h4>{post.data.title}</h4>
-                <h4>{post.data.author}</h4>
-                <p>{post.data.pubDate.toString().slice(4, 16)}</p>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
+  <main class='w-lvw mt-32 grid px-5 md:px-20 lg:px-32 xl:px-40'>
+    <ul class='flex flex-col p-2' aria-label='A collection of thumbnails of all the posts.'>
+      {
+        posts.map((post) => (
+          <li class='mb-10'>
+            <a href={`/blog/${post.slug}/`}>
+              <img src={post.data.heroImage.src} alt={post.data.heroImage.alt} />
+              <h3 class='font-extrabold'>{post.data.title}</h3>
+              <section class='mt-1 flex justify-evenly'>
+                <span>
+                  <>
+                    <h4>Written by: </h4>
+                    <h4>{post.data.author}</h4>
+                  </>
+                </span>
+                <span>
+                  <h4>Posted on: </h4>
+                  <h4>{post.data.pubDate.toString().slice(4, 16)}</h4>
+                </span>
+              </section>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </main>
 </BaseLayout>
+
+<style>
+  h4 {
+    @apply inline-block;
+  }
+  span h4:nth-child(2) {
+    @apply font-semibold;
+  }
+</style>
