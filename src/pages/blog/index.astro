@@ -12,8 +12,10 @@ const posts = await getCollection('blog');
         posts.map((post) => (
           <li class='mb-10'>
             <a href={`/blog/${post.slug}/`}>
-              <img src={post.data.heroImage.src} alt={post.data.heroImage.alt} />
-              <h3 class='font-extrabold'>{post.data.title}</h3>
+              <section class='flex flex-col'>
+                <img src={post.data.heroImage.src} alt={post.data.heroImage.alt} />
+                <h3 class='self-center font-extrabold text-lg text-justify'>{post.data.title}</h3>
+              </section>
               <section class='mt-1 flex justify-evenly'>
                 <span>
                   <>
@@ -36,7 +38,7 @@ const posts = await getCollection('blog');
 
 <style>
   h4 {
-    @apply inline-block;
+    @apply inline-block text-sm;
   }
   span h4:nth-child(2) {
     @apply font-semibold;
