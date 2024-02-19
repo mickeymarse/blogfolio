@@ -8,22 +8,21 @@ const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <main>
-    <article>
+  <main class='w-lvw mt-32 grid px-5 md:px-20 lg:px-32 xl:px-40'>
+    <article class='flex flex-col' aria-label='The blog post'>
       <figure>
         {heroImage && <img src={heroImage.src} alt={heroImage.alt} />}
-        {heroImage && <figcaption>{heroImage.alt}</figcaption>}
+        {heroImage && <figcaption class='text-xs font-thin'>{heroImage.alt}</figcaption>}
       </figure>
-      <section aria-label='Section containing the text of the blog post.'>
-        <section aria-label='Section containing the title of the blog post.'>
-          <section aria-label='Section containing the published date of the blog post.'>
-            {pubDate.toString().slice(4, 16)}
-          </section>
-          <h1>{title}</h1>
-          <hr />
-        </section>
-        <slot />
+      <section
+        class='self-end my-5'
+        aria-label='Section containing the published date of the blog post.'
+      >
+        {pubDate.toString().slice(4, 16)}
       </section>
+      <h1 class='text-xl font-extrabold text-justify'>{title}</h1>
+      <hr class='my-5' />
+      <slot />
     </article>
   </main>
 </BaseLayout>
