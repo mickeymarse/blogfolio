@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
+import BlogPostComments from '../components/BlogPostComments.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -31,9 +32,15 @@ const { title, description, pubDate, heroImage } = Astro.props;
       >
         {pubDate.toString().slice(4, 16)}
       </section>
-      <h1 class='self-center text-xl lg:text-3xl font-extrabold text-justify'>{title}</h1>
+      <h1 class='self-center text-2xl lg:text-5xl font-extrabold text-justify'>{title}</h1>
       <hr class='my-5 w-8/12 mx-auto' />
-      <slot />
+      <section
+        class='bg-ghgray p-5 w-full lg:mx-auto font-mono text-justify prose prose-lg lg:prose-2xl prose-invert'
+        aria-label='Section where the body of the blog post is.'
+      >
+        <slot />
+      </section>
     </article>
+    <BlogPostComments />
   </main>
 </BaseLayout>
