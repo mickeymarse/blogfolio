@@ -38,11 +38,11 @@ const { title, description, pubDate, heroImage } = Astro.props;
       <h1 class='self-center text-2xl lg:text-5xl font-extrabold text-justify'>{title}</h1>
       <hr class='my-5 w-8/12 mx-auto' />
       <section
-        class='bg-ghgray p-5 w-full lg:mx-auto font-mono text-justify prose prose-lg lg:prose-2xl prose-invert'
+      class='flex flex-col bg-ghgray p-5 w-full lg:w-9/12 lg:mx-auto font-mono text-justify prose max-w-none prose-lg lg:prose-2xl prose-invert'
         aria-label='Section where the body of the blog post is.'
       >
-        <slot />
-      </section>
+      <slot />
+    </section>
     </article>
     <BlogPostComments />
   </main>
