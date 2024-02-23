@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 // FIXME: Add type properly
 export default function Navbar({ homeIcon }: any) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const navlink: string =
-    'rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,26 +24,26 @@ export default function Navbar({ homeIcon }: any) {
       }`}
     >
       <section className='flex flex-row gap-x-5'>
-        <a href='/' className={`${navlink} text-neonp motion-safe:animate-pulse`}>
+        <a href='/' className='navlink text-neonp motion-safe:animate-pulse'>
           {homeIcon}
         </a>
-        <a href='/#work' className={navlink}>
+        <a href='/#work' className='navlink'>
           Work
         </a>
-        <a href='/#about' className={navlink}>
+        <a href='/#about' className='navlink'>
           About
         </a>
-        <a href='/blog' className={navlink}>
+        <a href='/blog' className='navlink'>
           Blog
         </a>
-        <a href='/if' className={navlink}>
+        <a href='/if' className='navlink'>
           Fiction
         </a>
         <a
           href='/MicheleMariaSerrapica_CV.pdf'
           target='blank'
           type='application/pdf'
-          className={navlink}
+          className='navlink'
         >
           CV
         </a>

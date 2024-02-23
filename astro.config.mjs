@@ -7,4 +7,5 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx(), tailwind(), icon()],
+  site: 'https://www.mickeymarse.dev/',
 });

@@ -8,6 +8,7 @@ export default {
         black2: '#000000f2',
         back: '#07070633',
         back2: '#070706e6',
+        ghgray: '#222224',
         neonp: '#FB48C4',
         reddish: '#ff5757',
         pinkish: '#ffecdb',

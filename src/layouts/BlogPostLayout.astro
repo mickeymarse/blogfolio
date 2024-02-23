@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import BlogPostComments from '../components/BlogPostComments.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, heroImage } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class='w-lvw mt-32 grid px-5 md:px-20 lg:px-32 xl:px-40'>
+    <span class='flex flex-row gap-2 justify-evenly mb-5'
+      ><a href='/blog' class='lg:text-lg navlink'>Back to all posts</a><a
+        href='feed.xml'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='lg:text-lg navlink'>Subscribe to the feed</a
+      ></span
+    >
+    <article class='flex flex-col' aria-label='The blog post'>
+      <figure class='self-center'>
+        {heroImage && <img src={heroImage.src} alt={heroImage.alt} />}
+        {
+          heroImage && (
+            <figcaption class='text-xs lg:text-sm font-thin lg:font-light'>
+              {heroImage.alt}
+            </figcaption>
+          )
+        }
+      </figure>
+      <section
+        class='self-end lg:mx-auto my-5 lg:text-xl'
+        aria-label='Section containing the published date of the blog post.'
+      >
+        {pubDate.toString().slice(4, 16)}
+      </section>
+      <h1 class='self-center text-2xl lg:text-5xl font-extrabold text-justify'>{title}</h1>
+      <hr class='my-5 w-8/12 mx-auto' />
+      <section
+      class='flex flex-col bg-ghgray p-5 w-full lg:w-9/12 lg:mx-auto font-mono text-justify prose max-w-none prose-lg lg:prose-2xl prose-invert'
+        aria-label='Section where the body of the blog post is.'
+      >
+      <slot />
+    </section>
+    </article>
+    <BlogPostComments />
+  </main>
+</BaseLayout>

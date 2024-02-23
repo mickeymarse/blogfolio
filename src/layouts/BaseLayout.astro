@@ -8,9 +8,10 @@ import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,8 +24,10 @@ const { title } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <ViewTransitions />
     <title>{title}</title>
+    <meta name='title' content={title} />
+    {description && <meta name='description' content={description} />}
   </head>
-  <body class='bg-back text-white'>
+  <body class='bg-back2 text-white'>
     <Matrix />
     <Navbar client:load>
       <Icon
@@ -39,5 +42,10 @@ const { title } = Astro.props;
     <Footer />
     <!-- TODO: Create a "white" palette for the text. -->
     <script is:inline src='https://code.jquery.com/jquery-3.7.0.min.js'></script>
+    <style is:global>
+      .navlink {
+        @apply rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2 motion-safe:animate-pulse;
+      }
+    </style>
   </body>
 </html>
