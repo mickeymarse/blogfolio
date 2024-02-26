@@ -29,14 +29,7 @@ const { title, description } = Astro.props;
   </head>
   <body class='bg-back2 text-white'>
     <Matrix />
-    <Navbar client:load>
-      <Icon
-        slot='homeIcon'
-        name='mdi:pound'
-        title='Neon pink hash symbol.'
-        class='motion-safe:animate-pulse'
-      />
-    </Navbar>
+    <Navbar client:load />
     <Sidebar />
     <slot />
     <Footer />

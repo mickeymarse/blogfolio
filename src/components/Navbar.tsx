@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-// FIXME: Add type properly
-export default function Navbar({ homeIcon }: any) {
+import { Icon } from '@iconify/react';
+
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Navbar({ homeIcon }: any) {
     >
       <section className='flex flex-row gap-x-5'>
         <a href='/' className='navlink text-neonp motion-safe:animate-pulse'>
-          {homeIcon}
+          <Icon icon='mdi:pound' />
         </a>
         <a href='/#work' className='navlink'>
           Work
