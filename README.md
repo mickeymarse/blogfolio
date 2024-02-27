@@ -12,6 +12,7 @@ The _typewriter effect_ has been done with [this package](https://www.npmjs.com/
 
 ## Future Plans
 
+- Implement E2E testing;
 - Launch the **Fiction** section;
 - Experiment with Svelte, Vue and Angular by switching some of the components (:pink_heart:Astro Islands:pink_heart:);
 - Create tickets from the long TODO/FIXME tree produced in the code;
