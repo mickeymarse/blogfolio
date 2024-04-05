@@ -16,14 +16,14 @@ const posts = await getCollection('blog');
       href='feed.xml'
     />
     <span class='flex flex-row gap-2 justify-center mb-12 md:mb-16 lg:mb-24'
-      ><h1 class='text-4xl md:text-5xl lg:text-7xl font-extrabold'>Mickey's Blog</h1><a
+      ><h1 class='text-4xl md:text-5xl font-extrabold'>Mickey's Blog</h1><a
         href='feed.xml'
         target='_blank'
         rel='noopener noreferrer'
         ><Icon
           name='simple-icons:rss'
           title='Subscribe to my blog"'
-          class='size-10 md:size-14 lg:size-20 navlink'
+          class='size-10 md:size-14 navlink'
         /></a
       ></span
     >
@@ -45,7 +45,7 @@ const posts = await getCollection('blog');
                 <img
                   src={post.data.heroImage.src}
                   alt={post.data.heroImage.alt}
-                  class='self-center size-10/12 md:size-8/12'
+                  class='self-center aspect-square object-cover size-10/12 md:size-7/12'
                 />
               </section>
               <section class='mt-1 flex justify-evenly'>
