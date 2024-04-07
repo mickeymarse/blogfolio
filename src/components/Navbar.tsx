@@ -41,7 +41,7 @@ export default function Navbar() {
           Fiction
         </a>
         <a
-          href='/MicheleMariaSerrapica_CV.pdf'
+          href='/MicheleMariaSerrapica-CV.pdf'
           target='blank'
           type='application/pdf'
           className='navlink'
