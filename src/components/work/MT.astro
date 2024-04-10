@@ -1,0 +1,33 @@
+---
+import ProjectsLayout from '../../layouts/ProjectsLayout.astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import mt from '../../../public/metrak.png';
+
+const layoutProps = {
+  imageHref: 'https://github.com/mickeymarse/metrak',
+  projectTitle: 'MeTrak (early development)',
+  projectParagraph: 'My personal media tracker built with Ruby on Rails.',
+  firstIconHref: 'https://github.com/mickeymarse/metrak',
+};
+---
+
+<ProjectsLayout
+  imageHref={layoutProps.imageHref}
+  projectTitle={layoutProps.projectTitle}
+  projectParagraph={layoutProps.projectParagraph}
+  firstIconHref={layoutProps.firstIconHref}
+>
+  <Image
+    slot='project-image'
+    src={mt}
+    alt='AI generated logo of a badly drawn woman wearing some worth AR glasses and MeTrak written underneath.'
+    class='image-style'
+  />
+  <Icon
+    slot='first-icon'
+    name='simple-icons:github'
+    title='Neon pink version of the Github logo.'
+    class='icon-style'
+  />
+</ProjectsLayout>

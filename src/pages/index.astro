@@ -9,6 +9,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import RR from '../components/work/RR.astro';
 import SOCS from '../components/work/SOCS.astro';
 import SID from '../components/work/SID.astro';
+import TMA from '../components/work/TMA.astro';
+import MT from '../components/work/MT.astro';
 import TechStack from '../components/TechStack.astro';
 import About from '../texts/About.mdx';
 import Contact from '../texts/Contact.mdx';
@@ -33,6 +35,8 @@ import Contact from '../texts/Contact.mdx';
         <TypedProjects client:visible />
       </header>
       <article>
+        <MT />
+        <TMA />
         <SID />
         <RR />
         <SOCS />
