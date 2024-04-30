@@ -32,7 +32,7 @@ const posts = await getCollection('blog');
       aria-label='A collection of thumbnails of all the posts.'
     >
       {
-        posts.map((post) => (
+        posts.reverse().map((post) => (
           <li class='mb-10'>
             <a href={`/blog/${post.slug}/`} class='hover:motion-safe:animate-pulse'>
               <section class='flex flex-col'>
