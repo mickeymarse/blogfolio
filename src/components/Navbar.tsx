@@ -37,9 +37,9 @@ export default function Navbar() {
         <a href='/blog' className='navlink'>
           Blog
         </a>
-        <a href='/if' className='navlink'>
+        {/* <a href='/if' className='navlink'>
           Fiction
-        </a>
+        </a> */}
         <a
           href='/MicheleMariaSerrapica-CV.pdf'
           target='blank'
