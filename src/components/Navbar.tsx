@@ -37,17 +37,6 @@ export default function Navbar() {
         <a href='/blog' className='navlink'>
           Blog
         </a>
-        {/* <a href='/if' className='navlink'>
-          Fiction
-        </a> */}
-        <a
-          href='/MicheleMariaSerrapica-CV.pdf'
-          target='blank'
-          type='application/pdf'
-          className='navlink'
-        >
-          CV
-        </a>
       </section>
       <section className='flex flex-row gap-x-5'>
         {/* <p className={navlink}>moon</p>
