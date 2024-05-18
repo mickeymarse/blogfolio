@@ -38,8 +38,8 @@ import { Image } from 'astro:assets';
     </a>
 
     <section id='work' class='mb-24 mt-40 grid'>
-      <header class='place-self-end mb-24'>
-        <TypedProjects client:visible />
+      <header class='section-header mb-24'>
+        <p>Projects</p>
       </header>
       <article>
         <section class='grid grid-cols-2'>
@@ -52,22 +52,28 @@ import { Image } from 'astro:assets';
       </article>
     </section>
     <section class='my-24 grid'>
-      <header class='place-self-end'>
-        <TypedTech client:visible />
+      <header class='section-header'>
+        <p>Tech Stack</p>
       </header>
       <TechStack />
     </section>
     <section id='about' class='my-24 grid'>
-      <header class='place-self-end'>
-        <TypedAbout client:visible />
+      <header class='section-header'>
+        <p>Who Am I</p>
       </header>
       <About />
     </section>
     <section id='contact' class='my-24 grid'>
-      <header class='place-self-end'>
-        <TypedContact client:visible />
+      <header class='section-header'>
+        <p>Contact</p>
       </header>
       <Contact />
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .section-header {
+    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-sans font-bold place-self-end;
+  }
+</style>

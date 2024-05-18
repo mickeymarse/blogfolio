@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav
       id='navbar'
       className={`sticky top-0 left-0 px-5 py-1 w-full hidden md:flex justify-between font-sans font-bold text-2xl  z-50 ${
-        isScrolled ? 'bg-back2 rounded h-20 text-4xl' : 'bg-transparent'
+        isScrolled ? 'bg-back2 rounded h-20 text-3xl' : 'bg-transparent'
       }`}
     >
       <section className='flex flex-row gap-x-5'>
