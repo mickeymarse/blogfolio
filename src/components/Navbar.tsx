@@ -37,6 +37,9 @@ export default function Navbar() {
         <a href='/blog' className='navlink'>
           Blog
         </a>
+        <a href='/#contact' className='navlink'>
+          Contact
+        </a>
       </section>
       <section className='flex flex-row gap-x-5'>
         {/* <p className={navlink}>moon</p>
