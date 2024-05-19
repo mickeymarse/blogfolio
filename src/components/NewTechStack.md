@@ -1,4 +1,4 @@
-<article class="grid grid-cols-8 justify-items-center p-10 my-24 gap-8 bg-gradient-to-t from-ghgray">
+<article class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 justify-items-center w-fit place-self-center p-10 my-12 gap-8 bg-gradient-to-t from-ghgray">
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
