@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './node_modules/flowbite/**/*.js',
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
@@ -21,5 +18,5 @@ export default {
     },
   },
 
-  plugins: [require('@tailwindcss/typography'), require('flowbite/plugin')],
+  plugins: [require('@tailwindcss/typography')],
 };
