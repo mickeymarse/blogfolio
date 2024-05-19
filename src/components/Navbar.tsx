@@ -29,7 +29,7 @@ export default function Navbar() {
           <Icon icon='mdi:pound' />
         </a>
         <a href='/#work' className='navlink'>
-          Work
+          Projects
         </a>
         <a href='/#about' className='navlink'>
           About

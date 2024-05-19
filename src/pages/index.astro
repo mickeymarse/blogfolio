@@ -1,10 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import TypedIntro from '../components/typewriter/TypedIntro.tsx';
-import TypedProjects from '../components/typewriter/TypedProjects.tsx';
-import TypedAbout from '../components/typewriter/TypedAbout.tsx';
-import TypedTech from '../components/typewriter/TypedTech.tsx';
-import TypedContact from '../components/typewriter/TypedContact.tsx';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import RR from '../components/work/RR.astro';
 import SOCS from '../components/work/SOCS.astro';
@@ -14,7 +10,7 @@ import MT from '../components/work/MT.astro';
 import TechStack from '../components/TechStack.astro';
 import About from '../texts/About.mdx';
 import Contact from '../texts/Contact.mdx';
-import { Image } from 'astro:assets';
+import Projects from '../components/Projects.astro';
 ---
 
 <BaseLayout title=`Mickey's Portfolio`>
@@ -42,13 +38,14 @@ import { Image } from 'astro:assets';
         <p>Projects</p>
       </header>
       <article>
-        <section class='grid grid-cols-2'>
+        <Projects />
+        <!-- <section class='grid grid-cols-2'>
           <MT />
           <TMA />
         </section>
         <SID />
         <RR />
-        <SOCS />
+        <SOCS /> -->
       </article>
     </section>
     <section class='my-24 grid'>

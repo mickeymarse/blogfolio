@@ -1,0 +1,118 @@
+<!-- Table.astro -->
+<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>
+  <table class='w-full text-xl text-left rtl:text-right table-text'>
+    <thead class='table-head'>
+      <tr>
+        <th scope='col' class='table-th'> Title </th>
+        <th scope='col' class='table-th'> Description </th>
+        <th scope='col' class='table-th'> Status </th>
+        <th scope='col' class='table-th'> GitHub </th>
+        <th scope='col' class='table-th'> More </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class='table-row'>
+        <th scope='row' class='table-th-row'> Metrak </th>
+        <td class='table-td'> My personal media tracker built with Ruby on Rails. </td>
+        <td class='table-td'> <em> early development </em> </td>
+        <td class='table-td'>
+          <a href='https://github.com/mickeymarse/metrak' target='_blank' class='table-link'>Link</a
+          >
+        </td>
+        <td class='table-td'> n/a </td>
+      </tr>
+      <tr class='table-row'>
+        <th scope='row' class='table-th-row'> TarMarApi </th>
+        <td class='table-td'> An API for the classic Tarot de Marseille built with Bun. </td>
+        <td class='table-td'> <em> alpha </em> </td>
+        <td class='table-td'>
+          <a href='https://github.com/mickeymarse/tarmarapi' class='table-link'>Link</a>
+        </td>
+        <td class='table-td'>
+          <a href='https://tarmarapi.fly.dev/' target='_blank' class='table-link'>Homepage</a>
+        </td>
+      </tr>
+      <tr class='table-row'>
+        <th scope='row' class='table-th-row'> 21 Sid </th>
+        <td class='table-td'>
+          Creating a new website and a mobile app for a small business based in East London.
+        </td>
+        <td class='table-td'> <em> early development </em> </td>
+        <td class='table-td'>
+          <a href='https://github.com/mickeymarse/21-sid-website' target='_blank' class='table-link'
+            >Website</a
+          >
+        </td>
+        <td class='table-td'>
+          <a href='https://github.com/mickeymarse/21-sid-app' target='_blank' class='table-link'
+            >Mobile App</a
+          >
+        </td>
+      </tr>
+      <tr class='table-row'>
+        <th scope='row' class='table-th-row'> Reading Room </th>
+        <td class='table-td'>
+          Helping educators and parents guiding children in developing healthy reading habits.
+        </td>
+        <td class='table-td'> <em> deployed </em> </td>
+        <td class='table-td'>
+          <a
+            href='https://github.com/mickeymarse/Reading-Room-App'
+            target='_blank'
+            class='table-link'>Link</a
+          >
+        </td>
+        <td class='table-td'>
+          <a href='https://www.youtube.com/watch?v=Cjjdsl9NvZU' target='_blank' class='table-link'
+            >Demo</a
+          >
+        </td>
+      </tr>
+      <tr class='table-row'>
+        <th scope='row' class='table-th-row'> SOCS </th>
+        <td class='table-td'>
+          Helping organise and access all daily shared resources by the SoC coaches.
+        </td>
+        <td class='table-td'> <em> deployed </em> </td>
+        <td class='table-td'>
+          <a href='https://github.com/mickeymarse/SOCS-App-FE' target='_blank' class='table-link'
+            >Link</a
+          >
+        </td>
+        <td class='table-td'>
+          <a href='https://youtu.be/mxEHmPxkqgc' target='_blank' class='table-link'>Demo</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style is:global>
+  .table-text {
+    @apply text-white;
+  }
+
+  .table-head {
+    @apply text-lg uppercase bg-gradient-to-b from-ghgray;
+  }
+
+  .table-th {
+    @apply px-6 py-3;
+  }
+
+  .table-row {
+    @apply odd:bg-gradient-to-r even:bg-gradient-to-l odd:from-back2 even:from-back odd:to-ghgray even:to-ghgray;
+  }
+
+  .table-th-row {
+    @apply px-6 py-4 font-medium whitespace-nowrap;
+  }
+
+  .table-td {
+    @apply px-6 py-4;
+  }
+
+  .table-link {
+    @apply font-medium text-neonp hover:underline;
+  }
+</style>
