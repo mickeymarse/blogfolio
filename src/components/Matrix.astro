@@ -59,28 +59,20 @@
       counter++;
     }
   };
-  {
-    /*
-  // With random character selection
-  const draw = () => {
-    context.fillStyle = 'rgba(68, 68, 63, 0.2)';
-    context.fillRect(0, 0, canvas.width, canvas.height);
-
-    context.fillStyle = '#8c52ff';
-    context.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < rainDrops.length; i++) {
-      const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-      context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-
-      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        rainDrops[i] = 0;
-      }
-      rainDrops[i]++;
-    }
-  };*/
-  }
 
   // Interval for calling function
   setInterval(draw, 90);
+</script>
+
+<script>
+  import { areWeInTheMatrix } from '../matrixCanvas.js';
+
+  // on/off canvas
+  areWeInTheMatrix.subscribe((matrix) => {
+    if (matrix) {
+      document.getElementById('Matrix').style.display = 'block';
+    } else {
+      document.getElementById('Matrix').style.display = 'hidden';
+    }
+  });
 </script>
