@@ -63,16 +63,3 @@
   // Interval for calling function
   setInterval(draw, 90);
 </script>
-
-<script>
-  import { areWeInTheMatrix } from '../matrixCanvas.js';
-
-  // on/off canvas
-  areWeInTheMatrix.subscribe((matrix) => {
-    if (matrix) {
-      document.getElementById('Matrix').style.display = 'block';
-    } else {
-      document.getElementById('Matrix').style.display = 'hidden';
-    }
-  });
-</script>

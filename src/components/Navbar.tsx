@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
-import { useStore } from '@nanostores/react';
-import { areWeInTheMatrix } from '../matrixCanvas.js';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const $areWeInTheMatrix = useStore(areWeInTheMatrix);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,10 +42,9 @@ export default function Navbar() {
         </a>
       </section>
       <section className='flex flex-row gap-x-5'>
-        {/* <p className={navlink}>moon</p> */}
-        <button onClick={() => areWeInTheMatrix.set(!$areWeInTheMatrix)} className='navlink'>
-          code
-        </button>
+        {/* <p className={navlink}>moon</p>
+        <p className={navlink}>moon</p>
+         */}
       </section>
     </nav>
   );
