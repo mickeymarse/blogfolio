@@ -8,4 +8,5 @@ import icon from 'astro-icon';
 export default defineConfig({
   integrations: [react(), mdx(), tailwind(), icon()],
   site: 'https://www.mickeymarse.dev/',
+  trailingSlash: 'never',
 });

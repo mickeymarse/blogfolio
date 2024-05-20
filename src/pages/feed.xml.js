@@ -11,6 +11,7 @@ export async function GET(context) {
     description: 'A journal on my journey into tech as a transfem career-changer.',
     // Pull in your project "site" from the endpoint context
     site: context.site,
+    trailingSlash: false,
     // Array of `<item>`s in output xml
     items: blog.map((post) => ({
       title: post.data.title,
@@ -24,6 +25,5 @@ export async function GET(context) {
       ...post.data,
     })),
     customData: `<language>en-gb</language>`,
-    stylesheet: '/rss/pretty-feed-v3.xsl',
   });
 }
