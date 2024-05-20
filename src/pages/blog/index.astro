@@ -8,63 +8,38 @@ const posts = await getCollection('blog');
 
 <!-- FIXME: Check why link is clickable form outside pic. -->
 <BaseLayout title='Blog'>
-  <main class='w-lvw mt-32 grid px-5 md:px-20 lg:px-32 xl:px-40'>
+  <main class='w-lvw mt-10 grid px-5 md:px-20 lg:px-32 xl:px-40'>
     <link
       rel='alternate'
       type='application/rss+xml'
       title="RSS Feed for Mickey's Blog"
       href='feed.xml'
     />
-    <span class='flex flex-row gap-2 justify-center mb-12 md:mb-16 lg:mb-24'
-      ><h1 class='text-4xl md:text-5xl font-extrabold'>Mickey's Blog</h1><a
+    <span class='flex flex-row gap-2 justify-center mb-12'
+      ><h1 class='text-4xl font-extrabold'>Mickey's Blog</h1><a
         href='feed.xml'
         target='_blank'
         rel='noopener noreferrer'
-        ><Icon
-          name='simple-icons:rss'
-          title='Subscribe to my blog"'
-          class='size-10 md:size-14 navlink'
-        /></a
+        ><Icon name='simple-icons:rss' title='Subscribe to my blog"' class='size-10 navlink' /></a
       ></span
     >
-    <ul
-      class='flex flex-col lg:grid lg:grid-cols-2 lg:gap-10 p-2'
-      aria-label='A collection of thumbnails of all the posts.'
-    >
+    <ol class='relative border-s border-gray-700 mx-auto mb-10'>
       {
         posts.reverse().map((post) => (
-          <li class='mb-10'>
-            <a href={`/blog/${post.slug}/`} class='hover:motion-safe:animate-pulse'>
-              <section class='flex flex-col'>
-                <h3
-                  class='self-center mb-1 font-extrabold text-lg md:text-xl lg:text-2xl text-justify truncate-overflow'
-                  style='max-width: 350px'
-                >
-                  {post.data.title}
-                </h3>
-                <img
-                  src={post.data.heroImage.src}
-                  alt={post.data.heroImage.alt}
-                  class='self-center aspect-square object-cover size-10/12 md:size-7/12'
-                />
-              </section>
-              <section class='mt-1 flex justify-evenly'>
-                <span>
-                  <>
-                    <h4>Written by: </h4>
-                    <h4>{post.data.author}</h4>
-                  </>
-                </span>
-                <span>
-                  <h4>Posted on: </h4>
-                  <h4>{post.data.pubDate.toString().slice(4, 16)}</h4>
-                </span>
-              </section>
+          <li class='mb-10 ms-4'>
+            <section class='absolute w-3 h-3 bg-gray-700 rounded-full mt-1.5 -start-1.5 border border-gray-400 ' />
+            <time class='mb-1 text-sm font-normal leading-none text-gray-500'>
+              {post.data.pubDate.toString().slice(4, 16)}
+            </time>
+            <br />
+            <a href={`/blog/${post.slug}/`} class='navlink text-xl font-semibold text-white'>
+              {post.data.title}
             </a>
+            <p class='mb-4 text-lg font-normal text-gray-300'>{post.data.description}</p>
           </li>
         ))
       }
-    </ul>
+    </ol>
   </main>
 </BaseLayout>
 
