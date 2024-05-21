@@ -16,4 +16,4 @@ The _typewriter effect_ has been done with [this package](https://www.npmjs.com/
 ~~&#9744; Launch the **Fiction** section;~~  
 &#9744; Experiment with Svelte, Vue and Angular by switching some of the components;  
 &#9744; Create tickets from the long TODO/FIXME tree produced in the code;  
-&#9744; Restyle using a component library.
+&#9745; Restyle using a component library.
