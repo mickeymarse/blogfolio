@@ -29,7 +29,7 @@ export default function Navbar() {
           <Icon icon='mdi:pound' />
         </a>
         <a href='/#work' className='navlink'>
-          Work
+          Projects
         </a>
         <a href='/#about' className='navlink'>
           About
@@ -43,7 +43,8 @@ export default function Navbar() {
       </section>
       <section className='flex flex-row gap-x-5'>
         {/* <p className={navlink}>moon</p>
-        <p className={navlink}>code</p> */}
+        <p className={navlink}>moon</p>
+         */}
       </section>
     </nav>
   );

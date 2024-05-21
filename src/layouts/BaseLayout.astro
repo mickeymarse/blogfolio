@@ -3,7 +3,6 @@ import Matrix from '../components/Matrix.astro';
 import Navbar from '../components/Navbar.tsx';
 import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
-import { Icon } from 'astro-icon/components';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -21,6 +20,12 @@ const { title, description } = Astro.props;
     <meta name='description' content='Website/portfolio/blog of Mickey Serrapica' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title="Mickey's Blogfolio"
+      href={`${Astro.site}rss.xml`}
+    />
     <meta name='generator' content={Astro.generator} />
     <ViewTransitions />
     <title>{title}</title>
@@ -37,6 +42,7 @@ const { title, description } = Astro.props;
     <script is:inline src='https://code.jquery.com/jquery-4.0.0-beta.min.js'></script>
     <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js'
     ></script>
+
     <style is:global>
       .navlink {
         @apply rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2 motion-safe:animate-pulse;
