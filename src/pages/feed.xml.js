@@ -12,12 +12,6 @@ export async function GET(context) {
     // Pull in your project "site" from the endpoint context
     site: context.site,
     trailingSlash: false,
-    xmlns: {
-      media: 'http://search.yahoo.com/mrss/',
-      atom: 'http://www.w3.org/2005/Atom',
-    },
-    // add atom:link to be compatible with atom
-    customData: `<atom:link href="${context.site}rss.xml" rel="self" type="application/rss+xml" />`,
     // Array of `<item>`s in output xml
     items: blog.map((post) => ({
       title: post.data.title,
@@ -29,13 +23,6 @@ export async function GET(context) {
       link: `/blog/${post.slug}/`,
       content: sanitizeHtml(parser.render(post.body)),
       ...post.data,
-      customData: `<media:content
-            type="image/${post.data.heroImage.format == 'jpg' ? 'jpeg' : 'png'}"
-            width="${post.data.heroImage.width}"
-            height="${post.data.heroImage.height}"
-            medium="image"
-            url="${context.site + post.data.heroImage.src}" />
-        `,
     })),
   });
 }
