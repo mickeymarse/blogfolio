@@ -19,18 +19,6 @@ const { title, description, pubDate } = Astro.props;
       ></span
     >
     <article class='flex flex-col' aria-label='The blog post'>
-      <!-- {
-        heroImage && (
-          <figure class='self-center size-96'>
-            {heroImage && <img src={heroImage.src} alt={heroImage.alt} />}
-            {heroImage && (
-              <figcaption class='text-xs lg:text-sm font-thin lg:font-light'>
-                {heroImage.alt}
-              </figcaption>
-            )}
-          </figure>
-        )
-      } -->
       <section
         class='self-end lg:mx-auto my-5'
         aria-label='Section containing the published date of the blog post.'
@@ -58,7 +46,7 @@ const { title, description, pubDate } = Astro.props;
 </BaseLayout>
 
 <script is:inline>
-  var toTopButton = document.getElementById('to-top-button');
+  let toTopButton = document.getElementById('to-top-button');
 
   // When the user scrolls down 200px from the top of the document, show the button
   window.onscroll = function () {
