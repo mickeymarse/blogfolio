@@ -1,7 +1,7 @@
 ---
 title: What is life?
 description: Brief story of a junior dev career changer who spends loads of time on YouTube.
-pubDate: 2024-03-28
+pubDate: 2024-05-28
 heroImage:
   {
     src: /blog-images/post-8/aalife.png,
@@ -32,7 +32,7 @@ And so I thought of building a simple **AL** to show to my lovely blog readers. 
 
 This is nothing, just a little silly thing, but it made me think:
 
-- **Also** JavaScript has classes, and we don't use them enough, why leave that to the _OOP babes_;
+- There is so much more to JavaScript than e-commerce;
 - There is so much more to programming/coding (_pick your fighter_) than just sending HTTP requests to ChatGPT;
 - Creation and innovation don't really happen in the tech bubble, but somewhere else, as per usual;
 - I still need a job and this is not helping.
