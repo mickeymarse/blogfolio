@@ -20,8 +20,8 @@ export default function Navbar() {
     // TODO: Add icons to toggle canvas and dark mode
     <nav
       id='navbar'
-      className={`sticky top-0 left-0 px-5 py-1 w-full hidden md:flex justify-between font-sans font-bold text-2xl  z-50 ${
-        isScrolled ? 'bg-back2 rounded h-20 text-3xl' : 'bg-transparent'
+      className={`sticky top-0 left-0 px-5 py-1 w-full hidden md:flex justify-between font-sans font-bold text-xl  z-50 ${
+        isScrolled ? 'bg-back2 rounded h-12 text-2xl' : 'bg-transparent'
       }`}
     >
       <section className='flex flex-row gap-x-5'>
