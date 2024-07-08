@@ -8,8 +8,6 @@ I did take advantage of the _Astro Island_ feature to build some of the componen
 I used **Tailwind** for styling and **Iconify** for the icons.  
 There is also a touch of the eternal **jQuery**.
 
-The _typewriter effect_ has been done with [this package](https://www.npmjs.com/package/typewriter-effect). While the Matrix rain is inspired by [Adam Nagy's tutorial](https://dev.to/javascriptacademy/matrix-raining-code-effect-using-javascript-4hep). There are many packages for this as well out there, but coding it myself was eventually what led to the desired result.
-
 ## Future Plans
 
 &#9744; Implement E2E testing;  
