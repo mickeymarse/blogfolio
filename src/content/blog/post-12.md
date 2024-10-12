@@ -4,7 +4,7 @@ description: The time when I came up with a metaphor to explain APIs to a non-te
 pubDate: 2024-07-29
 heroImage:
   {
-    src: /blog-images/post-12/wbeehive.png,
+    src: /blog-images/post-12/beehive.png,
     alt: A dithered image of an empty beehive on hanging on a branch,
   }
 slug: on-bees
