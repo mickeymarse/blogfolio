@@ -27,14 +27,7 @@ We'll see if I can keep up with my own promises.
 
 And since we need music to pair with Laura's visual, my tool of choice will be [a JavaScript port of a Haskell app](https://strudel.cc) (I told you we were going back to that quote).
 
-And that's an esoteric snippet I produced while doing the tutorial to prove I'm serious:
-
-<iframe
-        src="https://strudel.cc/#Ly8gZXNvdGVyaWMgcGVhCi8vIEBtaWNrZXltYXJzZSAob24gR2l0SHViLCBJbnN0YWdyYW0gYW5kIE1hc3RvZG9uKQoKJDogc291bmQoIjxpbnNlY3QgbWV0YWw6MyBjcm93OjMgY2FzaW86Nj4qNiwgPGFjaWQ6Mz4iKQoKJDogc291bmQoYDxiZCAtIGhoIGhoIGhoIC0sCltiZCBiZF0gLSBzZCBvaCwKc3BhY2U%2BKjE2YCkKICAubHBmKDUwMDApCiAgLmNwbSg5MC80KQogIC5iYW5rKCJWaXNjb1NwYWNlRHJ1bSIpCgokOiBub3RlKCJiIGEgYiBlLCBbLSBmIGEgZ10qNCwgPGcgYSBnPio4LCBbNCEyIDYqMyA0ITJdIikKICAuc291bmQoImdtX3ZvaWNlX29vaHMiLCAiZ21fYmxvd25fYm90dGxlIikKICAuY3BtKCIyMCIpCiAgLmxwZihzYXcucmFuZ2UoMzAwMCwgMTAwMCkpLmh1c2goKQoKJDogbm90ZSgiPFthMSBjMyBhMSBiMl0qMywgW2YyIGYzIGY0XSo1LCBbYmIyLCBnYjMsIGJiMl0%2BIikKLnNvdW5kKCJnbV9jZWxsbyIpCi5kZWxheSguMjUpCi5yb29tKDMpCi5scGYoNTAwMCkKLmdhaW4oIlsuNSAxXSo0IikKLnZvd2VsKCI8YSBlIGkgbyB1PiIpCgokOiBub3RlKCJjKjE2IikKICAuc291bmQoInNhd3Rvb3RoIikKICAubHBmKHNpbmUucmFuZ2UoMTAwLCAyMDAwKS5zbG93KDIpKQoK"
-        width="1000"
-        height="500"
-        >
-</iframe>
+And that's an esoteric snippet I produced while doing the tutorial to prove I'm serious: sorry, no `iframe`, you have to click [here](https://strudel.cc/#Ly8gZXNvdGVyaWMgcGVhCi8vIEBtaWNrZXltYXJzZSAob24gR2l0SHViLCBJbnN0YWdyYW0gYW5kIE1hc3RvZG9uKQoKJDogc291bmQoIjxpbnNlY3QgbWV0YWw6MyBjcm93OjMgY2FzaW86Nj4qNiwgPGFjaWQ6Mz4iKQoKJDogc291bmQoYDxiZCAtIGhoIGhoIGhoIC0sCltiZCBiZF0gLSBzZCBvaCwKc3BhY2U%2BKjE2YCkKICAubHBmKDUwMDApCiAgLmNwbSg5MC80KQogIC5iYW5rKCJWaXNjb1NwYWNlRHJ1bSIpCgokOiBub3RlKCJiIGEgYiBlLCBbLSBmIGEgZ10qNCwgPGcgYSBnPio4LCBbNCEyIDYqMyA0ITJdIikKICAuc291bmQoImdtX3ZvaWNlX29vaHMiLCAiZ21fYmxvd25fYm90dGxlIikKICAuY3BtKCIyMCIpCiAgLmxwZihzYXcucmFuZ2UoMzAwMCwgMTAwMCkpLmh1c2goKQoKJDogbm90ZSgiPFthMSBjMyBhMSBiMl0qMywgW2YyIGYzIGY0XSo1LCBbYmIyLCBnYjMsIGJiMl0%2BIikKLnNvdW5kKCJnbV9jZWxsbyIpCi5kZWxheSguMjUpCi5yb29tKDMpCi5scGYoNTAwMCkKLmdhaW4oIlsuNSAxXSo0IikKLnZvd2VsKCI8YSBlIGkgbyB1PiIpCgokOiBub3RlKCJjKjE2IikKICAuc291bmQoInNhd3Rvb3RoIikKICAubHBmKHNpbmUucmFuZ2UoMTAwLCAyMDAwKS5zbG93KDIpKQoK).
 
 That's all for today.  
 Throw money at Peckham Digital if you can, or tell the wealthy people you know to, so beautiful things can keep happening.
