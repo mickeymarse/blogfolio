@@ -1,8 +1,5 @@
 ---
-import Navbar from '../components/Navbar.tsx';
-import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -26,24 +23,19 @@ const { title, description } = Astro.props;
       href={`${Astro.site}feed.xml`}
     />
     <meta name='generator' content={Astro.generator} />
-    <ViewTransitions />
     <title>{title}</title>
     <meta name='title' content={title} />
     {description && <meta name='description' content={description} />}
   </head>
-  <body class='bg-back2 text-white'>
-    <Navbar client:load />
-    <Sidebar />
+  <body class='bg-black2 text-white'>
     <slot />
     <Footer />
-    <!-- TODO: Create a "white" palette for the text. -->
     <script is:inline src='https://code.jquery.com/jquery-4.0.0-beta.min.js'></script>
     <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js'
     ></script>
-
     <style is:global>
       .navlink {
-        @apply rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2 motion-safe:animate-pulse;
+        @apply rounded border-4 border-transparent hover:bg-neonp hover:text-back2;
       }
     </style>
   </body>

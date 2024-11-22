@@ -10,7 +10,7 @@ const Copyright = () => {
 
   return (
     <Fragment>
-      <p>{`© ${year} All Rights Reserved.`}</p>
+      <p>{`© ${year} Whatever Rights Reserved.`}</p>
     </Fragment>
   );
 };

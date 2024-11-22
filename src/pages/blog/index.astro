@@ -8,6 +8,7 @@ const posts = await getCollection('blog');
 
 <BaseLayout title='Blog'>
   <main class='w-lvw mt-10 grid px-5 md:px-20 lg:px-32 xl:px-40'>
+    <a href='/' class='navlink w-fit'>back to home</a>
     <link
       rel='alternate'
       type='application/rss+xml'
@@ -15,11 +16,15 @@ const posts = await getCollection('blog');
       href='feed.xml'
     />
     <span class='flex flex-row gap-2 justify-center mb-12'
-      ><h1 class='text-4xl font-extrabold font-mono'>Mickey's Blog</h1><a
+      ><h1 class='text-4xl font-extrabold font-mono'>Lu Blog</h1><a
         href='feed.xml'
         target='_blank'
         rel='noopener noreferrer'
-        ><Icon name='simple-icons:rss' title='Subscribe to my blog"' class='size-8 navlink' /></a
+        ><Icon
+          name='simple-icons:rss'
+          title='Subscribe to my blog"'
+          class='size-7 mt-1 navlink'
+        /></a
       ></span
     >
     <ol class='relative border-s border-gray-700 mx-auto mb-10'>

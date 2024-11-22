@@ -1,64 +1,48 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import NewTechStack from '../components/NewTechStack.md';
-import About from '../texts/About.mdx';
-import Contact from '../texts/Contact.mdx';
-import Projects from '../components/Projects.astro';
 ---
 
 <BaseLayout title=`Mickey's Portfolio`>
-  <!-- TODO: Check issue with fade transition -->
-  <main class='w-lvw grid px-5 md:px-20 lg:px-32 xl:px-40'>
-    <section class='mb-80 mt-40 pt-20 place-self-center'>
-      <Image
-        src='/mickeymarse.png'
-        alt='The handle @mickeymarse written in a mono font with two horizontal arrows pointing opposite directions respectively on top and bottom.'
-        width='700'
-        height='700'
-        class='motion-safe:animate-pulse'
-      />
+  <main class='mt-56 mb-32 px-5 md:px-20 lg:px-32 xl:px-96'>
+    <section>
+      <h1>I'm Mickey, like the mouse.</h1>
+      <h2>You can find me online as <em>mickeymarse</em>.</h2>
+      <p>
+        Currently working as Front End Developer at <a href='https://os.uk' target='_blank'>OS</a>.
+      </p>
+      <p>
+        I'm otherwise <em>developing my creative practice</em> combining storytelling, witchcraft and
+        code.
+      </p>
+      <p>
+        You can read about what I'm up to on <a href='/blog'>my blog</a>.
+      </p>
+      <p>Or you can follow me on other platforms.</p>
     </section>
-    <a href='/#work' class='mb-60 place-self-center'>
-      <Icon
-        name='mdi:chevron-down'
-        title='Neon pink chevron arrow down icon.'
-        class='text-neonp size-20 motion-safe:animate-pulse'
-      />
-    </a>
-
-    <section id='work' class='mb-24 mt-40 grid'>
-      <header class='section-header mb-24'>
-        <p>Projects</p>
-      </header>
-      <article>
-        <Projects />
-      </article>
-    </section>
-    <section class='mt-24 grid'>
-      <header class='section-header'>
-        <p>Tech Stack</p>
-      </header>
-      <NewTechStack />
-    </section>
-    <section id='about' class='mt-24 grid'>
-      <header class='section-header'>
-        <p>Who Am I</p>
-      </header>
-      <About />
-    </section>
-    <section id='contact' class='mt-24 grid'>
-      <header class='section-header'>
-        <p>Contact</p>
-      </header>
-      <Contact />
+    <section class='border-white border-solid border w-fit'>
+      <a href='https://github.com/mickeymarse' target='_blank'>GitHub</a>
+      <a href='https://social.gfsc.studio/@mickeymarse' target='_blank'>Mastodon</a>
+      <a href='https://bsky.app/profile/mickeymarse.dev' target='_blank'>Bluesky</a>
+      <a href='https://instagram.com/mickeymarse' target='_blank'>Instagram</a>
+      <a href='mailto:mickeymarse@tuta.io' target='_blank'>Email</a>
     </section>
   </main>
-</BaseLayout>
 
-<style>
-  .section-header {
-    @apply text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-sans font-bold place-self-end;
-  }
-</style>
+  <style>
+    h1 {
+      @apply text-xl md:text-2xl font-sans font-bold mb-7;
+    }
+    h2 {
+      @apply text-lg md:text-xl font-sans font-bold mb-5;
+    }
+    p {
+      @apply text-lg font-mono mb-3;
+    }
+    em {
+      @apply text-neonp;
+    }
+    a {
+      @apply text-lg text-malach font-mono rounded border-4 border-transparent place-self-center hover:bg-neonp hover:text-back2;
+    }
+  </style>
+</BaseLayout>
