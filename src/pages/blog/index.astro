@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import rssLogo from '../../assets/rss-logo.png';
 
 const posts = await getCollection('blog');
 ---
@@ -19,7 +21,7 @@ const posts = await getCollection('blog');
         href='feed.xml'
         target='_blank'
         rel='noopener noreferrer'
-        ><img src='/public/rss-logo.png' alt='The RSS logo.' class='size-7 navlink mt-1' /></a
+        ><Image src={rssLogo} alt='The RSS logo.' class='size-7 navlink mt-1' /></a
       ></span
     >
     <ol class='relative mx-auto mb-10'>
