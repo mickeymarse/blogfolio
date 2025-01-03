@@ -1,5 +1,5 @@
 ---
-title: I prefer wishes to resolution
+title: I prefer wishes to resolutions
 description: And it's not just because I'm bitter about my failures.
 pubDate: 2025-01-03
 slug: less-resolutions-more-wishes
