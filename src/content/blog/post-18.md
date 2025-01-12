@@ -1,5 +1,5 @@
 ---
-title: Week Recap #1
+title: Week Recap I 
 description: Notes on the week past.
 pubDate: 2025-01-12
 slug: week-recap-1
