@@ -4,6 +4,7 @@ description: I'm moving and it's tiring.
 pubDate: 2025-02-27
 slug: moving
 ---
+
 Moving is tiring.
 And expensive.
 Without even taking into account how expensive it is to live in London.

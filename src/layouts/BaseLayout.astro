@@ -27,8 +27,9 @@ const { title, description } = Astro.props;
     <meta name='title' content={title} />
     {description && <meta name='description' content={description} />}
     <meta property='og:url' content={`${Astro.url}`} />
+    <meta property='og:description' content={`${Astro.props.description}`} />
     <meta property='og:image' content='/ditherickey.png' />
-    <meta property='og:site_name' content=`Mickey's Landing` />
+    <meta property='og:site_name' content={`${Astro.props.title}`} />
   </head>
   <body class='bg-[#1b2b34] text-white'>
     <slot />
