@@ -1,8 +1,8 @@
 ---
-title: Week Recap IX
+title: Week Recap X
 description: Notes on the week past.
-pubDate: 2025-03-10
-slug: week-recap-0
+pubDate: 2025-03-23
+slug: week-recap-10
 ---
 
 - I missed a week. This month has been intense. Two weekends ago, my body force me to bed and I was sick until Tuesday. I didn't take any time off before, during and after the move, so I'm glad I'm going away for a bit next week. Now my room is almost ready. I also have a cozy gaming corner in which I will soon place my new Steam Deck!!! Anyhow, no more moving talking.

@@ -2,7 +2,7 @@
 title: Week Recap IX
 description: Notes on the week past.
 pubDate: 2025-03-10
-slug: week-recap-0
+slug: week-recap-9
 ---
 
 - I didn't take a break after the move and I kept working while fixing my room and unpacking and this weekend my body gave up. I'm feeling better now.
