@@ -21,5 +21,5 @@ pnpm-debug.log*
 .DS_Store
 
 # extras
-package-lock.json
+# package-lock.json // I'm now committing this for Aikido Security
 .vscode/
