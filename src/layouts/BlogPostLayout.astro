@@ -1,60 +1,65 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <main class='w-lvw mt-12 grid p-5'>
-    <span id='toppp' class='flex flex-row gap-2 justify-evenly mb-5'
-      ><a href='/blog' class='lg:text-lg navlink'>back to posts</a><a
-        href='https://www.mickeymarse.dev/feed.xml'
-        target='_blank'
-        rel='noopener noreferrer'
-        class='lg:text-lg navlink'>subscribe to feed</a
+  <main class="w-lvw mt-12 grid p-5">
+    <span id="toppp" class="flex flex-row gap-2 justify-evenly mb-5"
+      ><a href="/blog" class="lg:text-lg navlink">back to posts</a><a
+        href="https://www.mickeymarse.dev/feed.xml"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="lg:text-lg navlink">subscribe to feed</a
       ></span
     >
     <article
-      class='flex flex-col py-5 lg:py-10 lg:px-14 w-full lg:w-9/12 lg:mx-auto font-mono text-white text-justify prose max-w-none prose-base lg:prose-xl prose-invert'
-      aria-label='The blog post'
+      class="flex flex-col py-5 lg:py-10 lg:px-14 w-full lg:w-9/12 lg:mx-auto font-mono text-white text-justify prose max-w-5xl prose-base lg:prose-xl prose-invert"
+      aria-label="The blog post"
     >
       <section
-        class='self-end lg:mx-auto my-5'
-        aria-label='Section containing the published date of the blog post.'
+        class="self-end lg:mx-auto my-5"
+        aria-label="Section containing the published date of the blog post."
       >
         {pubDate.toString().slice(4, 16)}
       </section>
-      <h1 class='self-center text-2xl lg:text-3xl font-extrabold text-justify'>{title}</h1>
-      <hr class='my-3 w-8/12 mx-auto' />
+      <h1 class="self-center text-2xl lg:text-3xl font-extrabold text-justify">
+        {title}
+      </h1>
+      <hr class="my-3 w-8/12 mx-auto" />
       <slot />
     </article>
   </main>
   <button
-    id='to-top-button'
-    onclick='goToTop()'
-    title='Go To Top'
-    class='hidden fixed z-90 bottom-8 right-8 border-0 w-10 h-10 rounded-full drop-shadow-md bg-neonp text-white hover:bg-ghgray hover:text-neonp text-xl font-bold'
+    id="to-top-button"
+    onclick="goToTop()"
+    title="Go To Top"
+    class="hidden fixed z-90 bottom-8 right-8 border-0 w-10 h-10 rounded-full drop-shadow-md bg-neonp text-white hover:bg-ghgray hover:text-neonp text-xl font-bold"
     >&uarr;</button
   >
 </BaseLayout>
 
 <script is:inline>
-  let toTopButton = document.getElementById('to-top-button');
+  let toTopButton = document.getElementById("to-top-button");
 
   // When the user scrolls down 200px from the top of the document, show the button
   window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      toTopButton.classList.remove('hidden');
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      toTopButton.classList.remove("hidden");
     } else {
-      toTopButton.classList.add('hidden');
+      toTopButton.classList.add("hidden");
     }
   };
 
   // When the user clicks on the button, scroll to the top of the document
   function goToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
