@@ -15,6 +15,18 @@ export default {
         deepp: '#8c52ff',
         malach: '#00ff41',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: 'white',
+              '&:hover': {
+                color: '#FB48C4',
+              }
+            }
+          }
+        }
+      }
     },
   },
 
