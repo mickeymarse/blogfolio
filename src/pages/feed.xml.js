@@ -20,7 +20,7 @@ export async function GET(context) {
       author: post.data.author,
       heroImage: post.data.heroImage,
       // Compute RSS link from post `slug`
-      link: `/blog/${post.slug}/`,
+      link: `/blog/${post.id}/`,
       content: sanitizeHtml(parser.render(post.body)),
       ...post.data,
     })),
